@@ -1,0 +1,58 @@
+{
+  "name": "ChatSession",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "Unique session identifier"
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "content": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "description": "Chat conversation history"
+    },
+    "issue_resolved": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the issue was resolved through AI"
+    },
+    "escalated_to_human": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the issue was escalated to human support"
+    }
+  },
+  "required": [
+    "session_id"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "write": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

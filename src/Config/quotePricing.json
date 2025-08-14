@@ -1,0 +1,38 @@
+{
+  "useMultipliers": true,
+  "serviceTypes": {
+    "quick_fix": { "name": "Quick Fix", "basePrice": 19, "multiplier": 1 },
+    "redesign": { "name": "Design Refresh", "basePrice": 199, "multiplier": 1 },
+    "new_website": { "name": "New Website", "basePrice": 499, "multiplier": 1 },
+    "consultation": { "name": "Consultation", "basePrice": 99, "multiplier": 1 }
+  },
+  "platformTypes": {
+    "wordpress": { "name": "WordPress", "multiplier": 1.1 },
+    "shopify": { "name": "Shopify", "multiplier": 1 },
+    "wix": { "name": "Wix", "multiplier": 1.1 },
+    "squarespace": { "name": "Squarespace", "multiplier": 1.1 },
+    "custom_code": { "name": "Custom Code", "multiplier": 1.4 },
+    "no_website": { "name": "No Website Yet", "multiplier": 1 },
+    "other": { "name": "Other Platform", "multiplier": 1.1 }
+  },
+  "urgencyLevels": {
+    "low": { "name": "Standard (5-7 days)", "multiplier": 1 },
+    "medium": { "name": "Priority (2-3 days)", "multiplier": 1.3 },
+    "high": { "name": "Rush (24-48 hours)", "multiplier": 1.6 },
+    "critical": { "name": "Emergency (Same day)", "multiplier": 2 }
+  },
+  "complexityFactors": [
+    { "id": "ecommerce", "name": "E-commerce functionality", "price": 200 },
+    { "id": "custom_forms", "name": "Custom forms", "price": 100 },
+    { "id": "integrations", "name": "Third-party integrations", "price": 150 },
+    { "id": "multilingual", "name": "Multi-language support", "price": 300 },
+    { "id": "seo", "name": "Advanced SEO setup", "price": 180 },
+    { "id": "analytics", "name": "Analytics & tracking", "price": 80 }
+  ],
+  "additionalFeatures": {
+    "quick_fix": [],
+    "redesign": ["custom_forms", "integrations", "seo", "analytics"],
+    "new_website": ["ecommerce", "custom_forms", "integrations", "multilingual", "seo", "analytics"],
+    "consultation": ["analytics"]
+  }
+}

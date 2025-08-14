@@ -1,0 +1,85 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Layout from "./Components/Layout.jsx";
+import { useEffect } from 'react';
+import { trackPageView } from '@/utils/analytics';
+import DashboardLayout from "./Components/dashboard/DashboardLayout.jsx";
+import DashboardOverview from "./Pages/DashboardOverview.jsx";
+import DashboardRequests from "./Pages/DashboardRequests.jsx";
+import DashboardCredentials from "./Pages/DashboardCredentials.jsx";
+import DashboardSiteHealth from "./Pages/DashboardSiteHealth.jsx";
+import DashboardQuote from "./Pages/DashboardQuote.jsx";
+import DashboardAccount from "./Pages/DashboardAccount.jsx";
+import Home from "./Pages/Home.jsx";
+import AIChat from "./Pages/AIChat.jsx";
+import Contact from "./Pages/Contact.jsx";
+import Quote from "./Pages/Quote.jsx";
+import VerifyEmail from "./Pages/VerifyEmail.jsx";
+import Login from "./Pages/Login.jsx";
+import Register from "./Pages/Register.jsx";
+import Portal from "./Pages/Portal.jsx";
+import Credentials from "./Pages/Credentials.jsx";
+import SiteHealth from "./Pages/SiteHealth.jsx";
+import Pricing from "./Pages/Pricing.jsx";
+import ProtectedRoute from "./Components/ProtectedRoute.jsx";
+import DashboardTicket from "./Pages/DashboardTicket.jsx";
+import DashboardSubscription from "./Pages/DashboardSubscription.jsx";
+import KnowledgeBase from "./Pages/KnowledgeBase.jsx";
+import DashboardAnalytics from "./Pages/DashboardAnalytics.jsx";
+import DashboardBilling from "./Pages/DashboardBilling.jsx";
+
+function AnalyticsWrapper({ children }) {
+  const location = useLocation();
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
+  return children;
+}
+
+function App() {
+  return (
+    <Router>
+      <Layout>
+        <AnalyticsWrapper>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          {/* Public */}
+          <Route path="/ai-chat" element={<AIChat />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/quote" element={<Quote />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/verify" element={<VerifyEmail />} />
+          <Route path="/kb" element={<KnowledgeBase />} />
+          {/* Removed site-health from public navigation; available in Portal */}
+          <Route path="/portal" element={<Portal />} />
+
+          {/* Client Dashboard (Protected) */}
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<DashboardOverview />} />
+            <Route path="requests" element={<DashboardRequests />} />
+            <Route path="credentials" element={<DashboardCredentials />} />
+            <Route path="site-health" element={<DashboardSiteHealth />} />
+            <Route path="quote" element={<DashboardQuote />} />
+            <Route path="account" element={<DashboardAccount />} />
+            <Route path="ticket/:ticketId" element={<DashboardTicket />} />
+            <Route path="subscription" element={<DashboardSubscription />} />
+            <Route path="analytics" element={<DashboardAnalytics />} />
+            <Route path="billing" element={<DashboardBilling />} />
+          </Route>
+        </Routes>
+        </AnalyticsWrapper>
+      </Layout>
+    </Router>
+  );
+}
+
+export default App;

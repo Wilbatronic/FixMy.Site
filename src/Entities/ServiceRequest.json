@@ -1,0 +1,110 @@
+{
+  "name": "ServiceRequest",
+  "type": "object",
+  "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Client's full name"
+    },
+    "client_email": {
+      "type": "string",
+      "format": "email",
+      "description": "Client's email address"
+    },
+    "website_url": {
+      "type": "string",
+      "description": "Current website URL"
+    },
+    "platform_type": {
+      "type": "string",
+      "enum": [
+        "wordpress",
+        "shopify",
+        "wix",
+        "squarespace",
+        "custom_code",
+        "no_website",
+        "other"
+      ],
+      "description": "Website platform or technology"
+    },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "quick_fix",
+        "redesign",
+        "new_website",
+        "maintenance_plan",
+        "consultation"
+      ],
+      "description": "Type of service requested"
+    },
+    "problem_description": {
+      "type": "string",
+      "description": "Detailed description of the issue or requirements"
+    },
+    "urgency_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium",
+      "description": "How urgent the request is"
+    },
+    "budget_range": {
+      "type": "string",
+      "enum": [
+        "under_500",
+        "500_1000",
+        "1000_2500",
+        "2500_5000",
+        "5000_plus",
+        "not_sure"
+      ],
+      "description": "Client's budget range"
+    },
+    "estimated_quote": {
+      "type": "number",
+      "description": "System-generated quote estimate"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "in_review",
+        "quoted",
+        "accepted",
+        "in_progress",
+        "completed"
+      ],
+      "default": "new",
+      "description": "Request status"
+    },
+    "discord_notified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether Discord notification was sent"
+    }
+  },
+  "required": [
+    "client_name",
+    "client_email",
+    "service_type",
+    "problem_description"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "write": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
