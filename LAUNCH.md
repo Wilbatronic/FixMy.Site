@@ -38,7 +38,7 @@ sudo chown -R fixmysite:fixmysite /var/www/fixmysite
 ```bash
 sudo -u fixmysite bash -lc '
   cd /var/www/fixmysite && 
-  git clone YOUR_REPO_URL app && 
+  git clone https://github.com/Wilbatronic/FixMy.Site app && 
   cd app && 
   npm run install-all && 
   npm run build
