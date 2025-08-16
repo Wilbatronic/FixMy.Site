@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Twitter, Github, Menu, X, Home as HomeIcon, Settings, Calculator, Phone } from "lucide-react";
 import logo from "../../FixMySite_Logo_Transparent.png";
 import authService from "../services/auth";
+import OfflineIndicator from "./OfflineIndicator.jsx";
 
 const NavLinkItem = ({ to, children, onClick }) => (
   <NavLink
@@ -18,16 +19,31 @@ const NavLinkItem = ({ to, children, onClick }) => (
   </NavLink>
 );
 
-const FooterLink = ({ href, children }) => (
-    <a
-        href={href}
+const FooterLink = ({ href, children }) => {
+  // Check if it's an internal link (starts with /)
+  if (href.startsWith('/')) {
+    return (
+      <Link
+        to={href}
         className="text-sm text-gray-500 hover:text-gray-900"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
+      >
         {children}
+      </Link>
+    );
+  }
+  
+  // External links use anchor tags
+  return (
+    <a
+      href={href}
+      className="text-sm text-gray-500 hover:text-gray-900"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {children}
     </a>
-);
+  );
+};
 
 export default function Layout({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,6 +60,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <OfflineIndicator />
       <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
         <div className="container relative flex h-16 items-center justify-between px-5">
           <Link to="/" className="mr-6 flex items-center space-x-2">
@@ -124,7 +141,7 @@ export default function Layout({ children }) {
       <main className="flex-1">{children}</main>
       <footer className="border-t bg-gray-100">
           <div className="container py-10">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
                   <div>
                       <div className="flex items-center space-x-3 mb-3">
                         <img src={logo} alt="FixMy.Site" className="h-6 w-auto" />
@@ -135,16 +152,22 @@ export default function Layout({ children }) {
                       <h3 className="font-semibold text-gray-900 mb-4">Pages</h3>
                       <ul className="space-y-2">
                           <li><FooterLink href="/">Home</FooterLink></li>
-                          <li><FooterLink href="/ai-chat">AI Chat</FooterLink></li>
-                          <li><FooterLink href="/pricing">Plans & Services</FooterLink></li>
-                          <li><FooterLink href="/pricing">Pricing</FooterLink></li>
-                          <li><FooterLink href="/contact-quote">Contact & Quote</FooterLink></li>
+                          <li><FooterLink href="/pricing">Pricing & Services</FooterLink></li>
+                          <li><FooterLink href="/contact">Contact & Quote</FooterLink></li>
                       </ul>
                   </div>
                   <div>
                       <h3 className="font-semibold text-gray-900 mb-4">Contact</h3>
                       <ul className="space-y-2">
-                          <li><FooterLink href="/contact-quote">Contact Us</FooterLink></li>
+                          <li><FooterLink href="/contact">Contact Us</FooterLink></li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h3 className="font-semibold text-gray-900 mb-4">Legal</h3>
+                      <ul className="space-y-2">
+                          <li><FooterLink href="/privacy-policy">Privacy Policy</FooterLink></li>
+                          <li><FooterLink href="/terms-and-conditions">Terms & Conditions</FooterLink></li>
+                          <li><FooterLink href="/refund-policy">Refund Policy</FooterLink></li>
                       </ul>
                   </div>
                   <div>

@@ -11,7 +11,7 @@ const tiers = [
   {
     name: 'FixMy.Performance',
     price: '£49',
-    price_id: 'price_123abc_performance', // Placeholder
+    price_id: 'price_1RwnLKRezqS1N7dqMU9cSVd1',
     description: 'For websites that need speed, security, and stability — without the bloat.',
     features: [
       'Monthly performance optimization (caching, assets, CDN config)',
@@ -28,7 +28,7 @@ const tiers = [
   {
     name: 'FixMy.Stability',
     price: '£99',
-    price_id: 'price_123abc_optimise', // Placeholder
+    price_id: 'price_1RwnLKRezqS1N7dqbb8I5lzE',
     description: 'For growing businesses that want insight + performance with peace of mind.',
     features: [
       'Everything in Performance, plus:',
@@ -44,7 +44,7 @@ const tiers = [
   {
     name: 'FixMy.Security',
     price: '£199',
-    price_id: 'price_123abc_missioncritical', // Placeholder
+    price_id: 'price_1RwnLLRezqS1N7dqzeU4x3wU',
     description: 'For high-traffic, high-revenue websites that can’t afford downtime or bugs.',
     features: [
       'Everything in Stability, plus:',

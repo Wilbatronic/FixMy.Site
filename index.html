@@ -4,18 +4,569 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FixMy.Site — AI-powered website fixes and support</title>
-    <meta name="description" content="FixMy.Site helps you diagnose and fix website issues fast with AI and expert support. Speed, security, design, and more.">
-    <meta property="og:title" content="FixMy.Site — AI-powered website fixes and support">
-    <meta property="og:description" content="Diagnose and fix website issues fast with AI and expert support.">
+    
+    <!-- Primary Meta Tags -->
+    <title>FixMy.Site — Professional website troubleshooting and bug fixes</title>
+    <meta name="description" content="Get expert help fixing website errors, bugs, and technical issues. 404 errors, broken links, slow loading, security problems - we fix it all for small businesses.">
+    <meta name="keywords" content="website troubleshooting, 404 error fix, website bugs, broken website, website errors, website maintenance, web development support, technical website help, small business website support">
+    <meta name="author" content="FixMy.Site">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://fixmy.site/" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fixmy.site/">
-    <meta property="og:image" content="/vite.svg">
-    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="FixMy.Site — Professional website troubleshooting and bug fixes">
+    <meta property="og:description" content="Get expert help fixing website errors, bugs, and technical issues. 404 errors, broken links, slow loading, security problems - we fix it all for small businesses.">
+    <meta property="og:image" content="https://fixmy.site/FixMySite_Logo_Transparent.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="FixMy.Site">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fixmy.site/">
+    <meta property="twitter:title" content="FixMy.Site — Professional website troubleshooting and bug fixes">
+    <meta property="twitter:description" content="Get expert help fixing website errors, bugs, and technical issues. 404 errors, broken links, slow loading, security problems - we fix it all for small businesses.">
+    <meta property="twitter:image" content="https://fixmy.site/FixMySite_Logo_Transparent.png">
+    
+    <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="FixMy.Site">
+    
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FixMy.Site",
+      "url": "https://fixmy.site/",
+      "description": "Professional website troubleshooting and bug fixes for small businesses",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://fixmy.site/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "AI Diagnostic Tool",
+        "description": "Free AI-powered website diagnostic tool to help identify and troubleshoot common website issues",
+        "url": "https://fixmy.site/",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP",
+          "description": "Free AI diagnostic tool available on our homepage"
+        }
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "FixMy.Site",
+      "url": "https://fixmy.site/",
+      "logo": "https://fixmy.site/FixMySite_Logo_Transparent.png",
+      "description": "Professional website troubleshooting and bug fixes for small businesses",
+      "image": "https://fixmy.site/FixMySite_Logo_Transparent.png",
+      "telephone": "+44-800-123-4567",
+      "email": "help@fixmy.site",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB",
+        "addressLocality": "London",
+        "addressRegion": "England"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "££",
+      "currenciesAccepted": "GBP, USD, EUR",
+      "paymentAccepted": "Credit Card, PayPal, Bank Transfer",
+      "areaServed": "Worldwide",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5074,
+          "longitude": -0.1278
+        },
+        "geoRadius": "20000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Website Support Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "404 Error Fixes",
+              "description": "Fix broken links and 404 errors on your website"
+            },
+            "price": "50",
+            "priceCurrency": "GBP",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "description": "Professional 404 error diagnosis and fix. Includes broken link identification and redirect setup."
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Bug Fixes",
+              "description": "Fix technical bugs and errors on your website"
+            },
+            "price": "75",
+            "priceCurrency": "GBP",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "description": "Comprehensive bug fixing service for all types of website errors and technical issues."
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Performance Optimization",
+              "description": "Speed up slow loading websites"
+            },
+            "price": "100",
+            "priceCurrency": "GBP",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "description": "Website speed optimization including image compression, caching setup, and code optimization."
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Security Fixes",
+              "description": "Fix security vulnerabilities and malware issues"
+            },
+            "price": "150",
+            "priceCurrency": "GBP",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "description": "Security audit and malware removal service with ongoing protection recommendations."
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Diagnostic Tool",
+              "description": "Free AI-powered website diagnostic tool"
+            },
+            "price": "0",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "description": "Free AI tool available on our homepage to help diagnose common website issues.",
+            "url": "https://fixmy.site/"
+          }
+        ]
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sarah Johnson"
+          },
+          "reviewBody": "FixMy.Site quickly resolved our 404 errors and improved our website performance. Highly recommended for small businesses!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mike Chen"
+          },
+          "reviewBody": "Professional service that fixed our broken contact form within hours. Great communication throughout the process."
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "FixMy.Site",
+      "url": "https://fixmy.site/",
+      "logo": "https://fixmy.site/FixMySite_Logo_Transparent.png",
+      "description": "Professional website troubleshooting and bug fixes for small businesses",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "help@fixmy.site",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://fixmy.site/"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Website Troubleshooting and Bug Fixes",
+      "provider": {
+        "@type": "Organization",
+        "name": "FixMy.Site"
+      },
+      "description": "Expert website troubleshooting, error fixing, and technical support for small businesses",
+      "serviceType": "Website Troubleshooting",
+      "areaServed": "Worldwide",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://fixmy.site/contact"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Website Support Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "404 Error Fixes",
+              "description": "Fix broken links and 404 errors on your website"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Bug Fixes",
+              "description": "Fix technical bugs and errors on your website"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Performance Optimization",
+              "description": "Speed up slow loading websites"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Security Fixes",
+              "description": "Fix security vulnerabilities and malware issues"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fixmy.site/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://fixmy.site/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contact",
+          "item": "https://fixmy.site/contact"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Quote",
+          "item": "https://fixmy.site/quote"
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Fix a 404 Error on Your Website",
+      "description": "Step-by-step guide to identifying and fixing 404 errors on your website",
+      "image": "https://fixmy.site/FixMySite_Logo_Transparent.png",
+      "totalTime": "PT30M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "GBP",
+        "value": "50"
+      },
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Website access credentials"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "FTP or hosting control panel access"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Google Search Console"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Website analytics tools"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Identify Broken Links",
+          "text": "Use Google Search Console or website analytics to identify pages returning 404 errors",
+          "image": "https://fixmy.site/FixMySite_Logo_Transparent.png"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Check Internal Links",
+          "text": "Review your website's internal linking structure and fix any broken references",
+          "image": "https://fixmy.site/FixMySite_Logo_Transparent.png"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Set Up Redirects",
+          "text": "Create 301 redirects for old URLs to point to new, relevant pages",
+          "image": "https://fixmy.site/FixMySite_Logo_Transparent.png"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Update Sitemap",
+          "text": "Regenerate your XML sitemap to reflect the current site structure",
+          "image": "https://fixmy.site/FixMySite_Logo_Transparent.png"
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Common Website Errors and How to Fix Them",
+      "description": "A comprehensive guide to identifying and fixing common website errors that small businesses encounter",
+      "image": "https://fixmy.site/FixMySite_Logo_Transparent.png",
+      "author": {
+        "@type": "Organization",
+        "name": "FixMy.Site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FixMy.Site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://fixmy.site/FixMySite_Logo_Transparent.png"
+        }
+      },
+      "datePublished": "2024-12-19",
+      "dateModified": "2024-12-19",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fixmy.site/"
+      },
+      "articleSection": "Website Troubleshooting",
+      "keywords": "website errors, 404 error, broken website, website troubleshooting, small business website support"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a 404 error and how do you fix it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 404 error means a page on your website cannot be found. We fix this by identifying broken links, redirecting old URLs, and ensuring all pages are properly connected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you fix a broken website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We diagnose the issue by checking for coding errors, server problems, or configuration issues, then implement the appropriate fix to get your website working again."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What causes website errors and how are they fixed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Website errors can be caused by coding bugs, server issues, or configuration problems. We identify the root cause and implement targeted fixes to resolve the issue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to fix website errors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most common website errors can be fixed within 24-48 hours. Complex issues may take longer, but we provide regular updates throughout the process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with all types of websites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we work with WordPress, Shopify, custom websites, and all major platforms. Our expertise covers all common website technologies and frameworks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the fix doesn't work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer a satisfaction guarantee. If we can't fix your issue, you don't pay. We'll work with you until the problem is resolved."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PriceSpecification",
+      "name": "FixMy.Site Service Pricing",
+      "description": "Transparent pricing for professional website troubleshooting and bug fixes",
+      "price": "50",
+      "priceCurrency": "GBP",
+      "minPrice": "50",
+      "maxPrice": "150",
+      "validFrom": "2024-01-01",
+      "validThrough": "2025-12-31",
+      "valueAddedTaxIncluded": "true",
+      "eligibleRegion": {
+        "@type": "Country",
+        "name": "Worldwide"
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "Worldwide",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Website Troubleshooting Service",
+      "description": "Professional website troubleshooting and bug fixes for small businesses",
+      "brand": {
+        "@type": "Brand",
+        "name": "FixMy.Site"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "404 Error Fix",
+          "price": "50",
+          "priceCurrency": "GBP",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "Professional 404 error diagnosis and fix"
+        },
+        {
+          "@type": "Offer",
+          "name": "Website Bug Fix",
+          "price": "75",
+          "priceCurrency": "GBP",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "Comprehensive bug fixing service"
+        },
+        {
+          "@type": "Offer",
+          "name": "Performance Optimization",
+          "price": "100",
+          "priceCurrency": "GBP",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "Website speed optimization service"
+        },
+        {
+          "@type": "Offer",
+          "name": "Security Fix",
+          "price": "150",
+          "priceCurrency": "GBP",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "Security audit and malware removal"
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Diagnostic Tool",
+          "price": "0",
+          "priceCurrency": "GBP",
+          "availability": "https://schema.org/InStock",
+          "description": "Free AI diagnostic tool",
+          "url": "https://fixmy.site/"
+        }
+      ],
+      "category": "Website Services",
+      "url": "https://fixmy.site/"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

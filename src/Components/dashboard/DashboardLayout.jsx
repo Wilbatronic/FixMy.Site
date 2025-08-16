@@ -63,6 +63,9 @@ export default function DashboardLayout() {
                     <div className="mt-3 text-xs uppercase text-gray-500">Admin</div>
                     <NavItem to="/dashboard/analytics">Analytics</NavItem>
                     <NavItem to="/dashboard/billing">Custom Billing</NavItem>
+                    <NavItem to="/dashboard/admin/products">Products</NavItem>
+                    <NavItem to="/dashboard/admin/quotes">Quotes</NavItem>
+                    <NavItem to="/dashboard/admin/invoices">Invoices</NavItem>
                   </>
                 ) : null}
               </nav>

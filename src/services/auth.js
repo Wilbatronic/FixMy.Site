@@ -50,7 +50,8 @@ const refreshCurrentUser = async () => {
     const merged = { ...user, ...me };
     localStorage.setItem('user', JSON.stringify(merged));
     return merged;
-  } catch (_) {
+  } catch (error) {
+    console.warn('User refresh failed:', error);
     return user;
   }
 };
@@ -67,7 +68,10 @@ const refreshAccessToken = async () => {
       return merged;
     }
     return null;
-  } catch (_) {
+  } catch (error) {
+    console.warn('Token refresh failed:', error);
+    // Clear invalid user data
+    localStorage.removeItem('user');
     return null;
   }
 };

@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../Components/ui/card";
 import authService from "../services/auth";
 import { apiJson } from "@/utils/api";
 import { io } from 'socket.io-client';
+import { Button } from "../Components/ui/button";
+import AdminQuotes from './AdminQuotes';
 
 export default function DashboardRequests() {
+  const navigate = useNavigate();
   const [serviceRequests, setServiceRequests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -63,6 +66,10 @@ export default function DashboardRequests() {
       socket.disconnect();
     };
   }, []);
+
+  const handleCreateQuote = (request) => {
+    navigate('/admin/quotes/new', { state: { request } });
+  };
 
   return (
     <div className="p-4 sm:p-6 lg:p-8">
@@ -124,6 +131,7 @@ export default function DashboardRequests() {
                 ) : (
                   <p className="text-sm text-gray-500">Processing your request...</p>
                 )}
+                <Button onClick={() => handleCreateQuote(request)}>Create Quote</Button>
               </CardContent>
             </Card>
           );

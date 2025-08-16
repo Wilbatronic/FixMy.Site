@@ -2792,3 +2792,524 @@
 {"level":"info","message":"[43cd7ba5-6dfe-4dcc-b826-4fe0eb35a7d8] 204 POST /api/analytics (17ms)","service":"fixmysite-backend","timestamp":"2025-08-14 14:16:46"}
 {"level":"info","message":"[2c464d5d-5ca7-40ec-8313-29d438cc1cc3] 204 POST /api/analytics (16ms)","service":"fixmysite-backend","timestamp":"2025-08-14 14:16:46"}
 {"level":"info","message":"[3b617ec1-cc12-4e28-a24f-641ac7c43fdc] 204 POST /api/analytics (15ms)","service":"fixmysite-backend","timestamp":"2025-08-14 14:16:46"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 16:27:55"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 16:27:55"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 16:27:55"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 16:27:56"}
+{"level":"info","message":"[6a7e6957-ac42-466e-b396-9471562d776a] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:28:05"}
+{"level":"info","message":"[d0a5cdd1-b01b-4a77-a772-c9fa427e6441] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:28:05"}
+{"level":"info","message":"[6a7e6957-ac42-466e-b396-9471562d776a] 204 POST /api/analytics (18ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:28:05"}
+{"level":"info","message":"[d0a5cdd1-b01b-4a77-a772-c9fa427e6441] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:28:05"}
+{"level":"info","message":"[88e1c6c8-6f90-4d57-aca7-4c31b99bae06] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:28:55"}
+{"level":"info","message":"[88e1c6c8-6f90-4d57-aca7-4c31b99bae06] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:28:55"}
+{"level":"info","message":"[e952db71-aa81-4793-9e1c-485ee4b1f674] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:04"}
+{"level":"info","message":"[e952db71-aa81-4793-9e1c-485ee4b1f674] 204 POST /api/analytics (9ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:04"}
+{"level":"info","message":"[bd62a4b2-b87c-475b-b04a-f6956b7fcb12] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:07"}
+{"level":"info","message":"[bd62a4b2-b87c-475b-b04a-f6956b7fcb12] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:07"}
+{"level":"info","message":"[fa85ad5d-91f1-4d77-8177-c66e1ba86404] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:11"}
+{"level":"info","message":"[ee3af7ce-da95-4b0d-93dd-3358043aca02] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:11"}
+{"level":"info","message":"[5ed0d3a5-6a23-42c5-a0e1-ee6667bca005] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:11"}
+{"level":"info","message":"[fa85ad5d-91f1-4d77-8177-c66e1ba86404] 204 POST /api/analytics (23ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:11"}
+{"level":"info","message":"[5ed0d3a5-6a23-42c5-a0e1-ee6667bca005] 204 POST /api/analytics (21ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:11"}
+{"level":"info","message":"[ee3af7ce-da95-4b0d-93dd-3358043aca02] 204 POST /api/analytics (23ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:11"}
+{"level":"info","message":"[c6cdae15-36d0-4e13-a79c-8a1e3c62e4ce] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:12"}
+{"level":"info","message":"[c6cdae15-36d0-4e13-a79c-8a1e3c62e4ce] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:12"}
+{"level":"info","message":"[2f42d832-4f25-41f4-92f4-c6e31d4a1434] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:14"}
+{"level":"info","message":"[39310e0e-83c4-4c11-857d-8c02566ef496] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:14"}
+{"level":"info","message":"[2f42d832-4f25-41f4-92f4-c6e31d4a1434] 401 GET /api/service-requests (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:14"}
+{"level":"info","message":"[39310e0e-83c4-4c11-857d-8c02566ef496] 401 GET /api/service-requests (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:14"}
+{"level":"info","message":"[0741825a-38d7-4c1a-8d0c-9b313839e484] POST /api/token/refresh from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[a928f0eb-f000-45f8-ac4b-bc1e349720d8] POST /api/token/refresh from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[0741825a-38d7-4c1a-8d0c-9b313839e484] 200 POST /api/token/refresh (18ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[a928f0eb-f000-45f8-ac4b-bc1e349720d8] 200 POST /api/token/refresh (17ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[25dc3baa-dace-4cc8-9ce1-154adc97c9a2] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[ce36098b-0896-4740-9276-a66b73ceb41e] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[25dc3baa-dace-4cc8-9ce1-154adc97c9a2] 200 GET /api/service-requests (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[ce36098b-0896-4740-9276-a66b73ceb41e] 200 GET /api/service-requests (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[1674645e-a52d-48ab-9377-897cf8431f07] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[1674645e-a52d-48ab-9377-897cf8431f07] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:15"}
+{"level":"info","message":"[c32300af-089b-4452-9ee6-162c2dd9b73e] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:17"}
+{"level":"info","message":"[f8c280e7-f45a-4511-abe5-e6b9fa9aaa19] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:17"}
+{"level":"info","message":"[fefcfdfd-4fb8-4d17-b529-d0cb8e188b33] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:17"}
+{"level":"info","message":"[4b8430e2-986a-4379-964d-640685cd0cba] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:17"}
+{"level":"info","message":"[c32300af-089b-4452-9ee6-162c2dd9b73e] 200 GET /api/credentials (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:17"}
+{"level":"info","message":"[f8c280e7-f45a-4511-abe5-e6b9fa9aaa19] 200 GET /api/service-requests/active (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[fefcfdfd-4fb8-4d17-b529-d0cb8e188b33] 200 GET /api/service-requests/active (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[4b8430e2-986a-4379-964d-640685cd0cba] 200 GET /api/credentials (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[010844dd-d749-455a-8c71-5fb3546437a7] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[0af9bcb0-f89f-4ec0-951e-97c5ffe25b1f] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[010844dd-d749-455a-8c71-5fb3546437a7] 402 GET /api/site-health-summary (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[0af9bcb0-f89f-4ec0-951e-97c5ffe25b1f] 402 GET /api/site-health-summary (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[7bd84e21-4d0f-4673-933f-bf72bbbc1f32] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[7bd84e21-4d0f-4673-933f-bf72bbbc1f32] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:18"}
+{"level":"info","message":"[e12619f2-195e-4fa7-a9e2-5a8b1895c094] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:19"}
+{"level":"info","message":"[e12619f2-195e-4fa7-a9e2-5a8b1895c094] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:20"}
+{"level":"info","message":"[361eb3f8-f04a-485b-8460-d1e536f5cea9] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:20"}
+{"level":"info","message":"[361eb3f8-f04a-485b-8460-d1e536f5cea9] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:20"}
+{"level":"info","message":"[9fcdf913-f036-4fd0-b73c-f8c7f2d800a0] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:52"}
+{"level":"info","message":"[9fcdf913-f036-4fd0-b73c-f8c7f2d800a0] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:29:52"}
+{"level":"info","message":"User connected: 1 with socket ID T8jBBdKfEu9RTCN0AAAI","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:07"}
+{"level":"info","message":"[873d3d57-f237-4062-9bb6-fe38e0b855c9] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:07"}
+{"level":"info","message":"[321e7ab1-ee76-4062-b310-4b09596ad508] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:07"}
+{"level":"info","message":"[873d3d57-f237-4062-9bb6-fe38e0b855c9] 204 POST /api/analytics (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:07"}
+{"level":"info","message":"[321e7ab1-ee76-4062-b310-4b09596ad508] 204 POST /api/analytics (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:07"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:49"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:49"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:49"}
+{"level":"info","message":"User connected: 1 with socket ID -MtRTHeI5OrSvyj4AAAB","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:50"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:50"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:52"}
+{"level":"info","message":"User connected: 1 with socket ID uglNpqxXuxy18eLIAAAD","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:53"}
+{"level":"info","message":"[3dd732a6-d64b-4974-b182-2e37569e1631] POST /api/analytics from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:53"}
+{"level":"info","message":"[27c6155e-413c-424f-9c9c-5b5495fb200e] POST /api/analytics from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:53"}
+{"level":"info","message":"[3dd732a6-d64b-4974-b182-2e37569e1631] 204 POST /api/analytics (21ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:53"}
+{"level":"info","message":"[27c6155e-413c-424f-9c9c-5b5495fb200e] 204 POST /api/analytics (17ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:32:53"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:34:17"}
+{"level":"info","message":"User connected: 1 with socket ID 2lebIvpapZbZanYGAAAF","service":"fixmysite-backend","timestamp":"2025-08-16 16:34:17"}
+{"level":"info","message":"[96a0e37a-f892-4ee8-9d62-b2f25aef07a5] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:34:17"}
+{"level":"info","message":"[70f8d5e6-4cee-4959-835a-0b93f5eb63e5] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:34:17"}
+{"level":"info","message":"[96a0e37a-f892-4ee8-9d62-b2f25aef07a5] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:34:17"}
+{"level":"info","message":"[70f8d5e6-4cee-4959-835a-0b93f5eb63e5] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:34:17"}
+{"level":"info","message":"[3bdfbabb-f3f6-4863-9ea4-4340da6088f7] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:39"}
+{"level":"info","message":"[3bdfbabb-f3f6-4863-9ea4-4340da6088f7] 204 POST /api/analytics (10ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:39"}
+{"level":"info","message":"[72a1004b-aa62-457d-8af2-36ac7c69057d] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:42"}
+{"level":"info","message":"[72a1004b-aa62-457d-8af2-36ac7c69057d] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:42"}
+{"level":"info","message":"[2e4f19af-e3d0-4ac4-82c4-273ca31b0287] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:46"}
+{"level":"info","message":"[9b7536f0-91f8-4682-979c-b114b30ae038] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:46"}
+{"level":"info","message":"[b7099315-e6e1-430c-b841-5d29945aca80] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:46"}
+{"level":"info","message":"[2e4f19af-e3d0-4ac4-82c4-273ca31b0287] 204 POST /api/analytics (18ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:46"}
+{"level":"info","message":"[b7099315-e6e1-430c-b841-5d29945aca80] 204 POST /api/analytics (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:46"}
+{"level":"info","message":"[9b7536f0-91f8-4682-979c-b114b30ae038] 204 POST /api/analytics (17ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:46"}
+{"level":"info","message":"[7a3dd7c4-1aaf-434b-8b11-ccf8ce27c803] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:48"}
+{"level":"info","message":"[7a3dd7c4-1aaf-434b-8b11-ccf8ce27c803] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:48"}
+{"level":"info","message":"User connected: 1 with socket ID 889hcQPj3hUqsixLAAAI","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:48"}
+{"level":"info","message":"[00f775ba-cec1-4057-8b3d-364b589fc43c] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[00f775ba-cec1-4057-8b3d-364b589fc43c] 200 GET /api/service-requests (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[37701db6-3001-486f-ac7c-8e12a9dee982] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[37701db6-3001-486f-ac7c-8e12a9dee982] 200 GET /api/service-requests (2ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[c54440be-6d11-4a70-b78d-7b8daca0b188] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[c54440be-6d11-4a70-b78d-7b8daca0b188] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[0dc33395-ce8c-4b00-b5e5-44dd8ed00c81] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[569be823-54f9-4e6e-81b5-029efa98528c] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[bc5efd1f-5b38-4ca6-b07d-560d51c9dfc6] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[0dc33395-ce8c-4b00-b5e5-44dd8ed00c81] 200 GET /api/credentials (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[569be823-54f9-4e6e-81b5-029efa98528c] 200 GET /api/service-requests/active (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[bc5efd1f-5b38-4ca6-b07d-560d51c9dfc6] 200 GET /api/credentials (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[f0c2e0d6-a224-43a4-929c-f080e15572b7] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[f0c2e0d6-a224-43a4-929c-f080e15572b7] 304 GET /api/service-requests/active (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:50"}
+{"level":"info","message":"[c1447bf0-9c51-4c55-b6a3-43972dab5019] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:54"}
+{"level":"info","message":"[c1447bf0-9c51-4c55-b6a3-43972dab5019] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:54"}
+{"level":"info","message":"[bbcc1b2d-d444-4a1e-847b-fb72731814cc] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:56"}
+{"level":"info","message":"[d6fe585f-75fb-41f2-9c60-3a6802e3e733] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:56"}
+{"level":"info","message":"[bbcc1b2d-d444-4a1e-847b-fb72731814cc] 402 GET /api/site-health-summary (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:56"}
+{"level":"info","message":"[d6fe585f-75fb-41f2-9c60-3a6802e3e733] 402 GET /api/site-health-summary (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:56"}
+{"level":"info","message":"[b3bea2b0-bc44-4d45-bb1f-a0237cbf6775] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:58"}
+{"level":"info","message":"[b3bea2b0-bc44-4d45-bb1f-a0237cbf6775] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:35:58"}
+{"level":"info","message":"User connected: 1 with socket ID PT5Is2JUJl2rlNdnAAAK","service":"fixmysite-backend","timestamp":"2025-08-16 16:36:09"}
+{"level":"info","message":"[7e3d9d98-02dd-45be-907a-4e26370738e2] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:36:09"}
+{"level":"info","message":"[474ca4f0-0831-4ef7-9e58-8fd86efceb38] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:36:09"}
+{"level":"info","message":"[7e3d9d98-02dd-45be-907a-4e26370738e2] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:36:09"}
+{"level":"info","message":"[474ca4f0-0831-4ef7-9e58-8fd86efceb38] 204 POST /api/analytics (11ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:36:09"}
+{"level":"info","message":"[161e4554-27e0-4c9f-b3b2-7634ee6eb1c3] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:36:15"}
+{"level":"info","message":"[161e4554-27e0-4c9f-b3b2-7634ee6eb1c3] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:36:15"}
+{"level":"info","message":"[51134b00-d5e0-46bc-974d-ebdcb302ddc9] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:01"}
+{"level":"info","message":"[97b46f49-1925-4027-aa18-e88f7a54386a] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:01"}
+{"level":"info","message":"User connected: 1 with socket ID P4UIspkg1scL2qGqAAAM","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:01"}
+{"level":"info","message":"[51134b00-d5e0-46bc-974d-ebdcb302ddc9] 204 POST /api/analytics (34ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:01"}
+{"level":"info","message":"[97b46f49-1925-4027-aa18-e88f7a54386a] 204 POST /api/analytics (35ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:01"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:02"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:04"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:05"}
+{"level":"info","message":"User connected: 1 with socket ID 6XjGD_6FmeQEmT9fAAAO","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:19"}
+{"level":"info","message":"[28ea9d45-d13c-4899-b238-27376107747a] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:19"}
+{"level":"info","message":"[d800e89e-a68f-40a9-9cb2-fd654e0f4848] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:19"}
+{"level":"info","message":"[28ea9d45-d13c-4899-b238-27376107747a] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:19"}
+{"level":"info","message":"[d800e89e-a68f-40a9-9cb2-fd654e0f4848] 204 POST /api/analytics (11ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:37:19"}
+{"level":"info","message":"[77053a81-15f1-4b96-952f-d944ae90ed0e] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:40:46"}
+{"level":"info","message":"[77053a81-15f1-4b96-952f-d944ae90ed0e] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:40:46"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:41:45"}
+{"level":"info","message":"User connected: 1 with socket ID NdRCzTDVkfixH9koAAAQ","service":"fixmysite-backend","timestamp":"2025-08-16 16:41:46"}
+{"level":"info","message":"[64e1da99-985a-4b2b-b939-83d47f53381f] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:41:46"}
+{"level":"info","message":"[5b36dee2-f933-4660-b43e-c1d9ba1d858e] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:41:46"}
+{"level":"info","message":"[64e1da99-985a-4b2b-b939-83d47f53381f] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:41:46"}
+{"level":"info","message":"[5b36dee2-f933-4660-b43e-c1d9ba1d858e] 204 POST /api/analytics (22ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:41:46"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:27"}
+{"level":"info","message":"User connected: 1 with socket ID kYt0OId3FRZ8333cAAAS","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:28"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:29"}
+{"level":"info","message":"User connected: 1 with socket ID sVq3Rnqu7wNRK2U6AAAU","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:30"}
+{"level":"info","message":"[609ad37f-ba6e-420d-8fd0-d79a5fe37eec] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:30"}
+{"level":"info","message":"[35584e31-b8b1-4946-b245-418e941cf269] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:30"}
+{"level":"info","message":"[609ad37f-ba6e-420d-8fd0-d79a5fe37eec] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:30"}
+{"level":"info","message":"[35584e31-b8b1-4946-b245-418e941cf269] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:30"}
+{"level":"info","message":"[cf68d405-6f3d-436e-baf8-64b4e9bfe686] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:33"}
+{"level":"info","message":"[cf68d405-6f3d-436e-baf8-64b4e9bfe686] 204 POST /api/analytics (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:33"}
+{"level":"info","message":"[f6ae32fe-0092-4211-87e1-bcb2a5b1e208] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:49"}
+{"level":"info","message":"[f6ae32fe-0092-4211-87e1-bcb2a5b1e208] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:49"}
+{"level":"info","message":"[ed8fe147-6aef-45a5-80cc-32b3f3c251ac] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:55"}
+{"level":"info","message":"[ed8fe147-6aef-45a5-80cc-32b3f3c251ac] 204 POST /api/analytics (9ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:55"}
+{"level":"info","message":"[2ce73973-c016-4aa8-87c4-bf165f78fab5] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:55"}
+{"level":"info","message":"[2ce73973-c016-4aa8-87c4-bf165f78fab5] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:55"}
+{"level":"info","message":"[ea3ec68f-43d2-4401-aa47-9644703390ec] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:56"}
+{"level":"info","message":"[ea3ec68f-43d2-4401-aa47-9644703390ec] 204 POST /api/analytics (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:43:56"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:37"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:37"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:37"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:37"}
+{"level":"info","message":"[144d9608-f427-442b-99ac-9fa03ce15f8e] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:44"}
+{"level":"info","message":"[edb3dd11-99be-4d3e-89b1-bd03805524b7] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:44"}
+{"level":"info","message":"[144d9608-f427-442b-99ac-9fa03ce15f8e] 204 POST /api/analytics (23ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:44"}
+{"level":"info","message":"[edb3dd11-99be-4d3e-89b1-bd03805524b7] 204 POST /api/analytics (16ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:44:44"}
+{"level":"info","message":"[a4ed8570-15df-42d2-ad28-5ebec5b05755] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:45:13"}
+{"level":"info","message":"[a4ed8570-15df-42d2-ad28-5ebec5b05755] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:45:13"}
+{"level":"info","message":"[d9786483-4400-4203-b8da-128351ab2ce5] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:45:15"}
+{"level":"info","message":"[d9786483-4400-4203-b8da-128351ab2ce5] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:45:15"}
+{"level":"info","message":"[030c3d41-2216-49ab-82b8-5d8e9077f0ac] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:46:04"}
+{"level":"info","message":"[030c3d41-2216-49ab-82b8-5d8e9077f0ac] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:46:04"}
+{"level":"info","message":"[10a93612-db8b-462a-8514-7e066abc5fb0] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:49:31"}
+{"level":"info","message":"[dac08645-7316-41ee-b3e3-045f4ed01a50] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:49:31"}
+{"level":"info","message":"[10a93612-db8b-462a-8514-7e066abc5fb0] 204 POST /api/analytics (19ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:49:31"}
+{"level":"info","message":"[dac08645-7316-41ee-b3e3-045f4ed01a50] 204 POST /api/analytics (18ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:49:31"}
+{"level":"info","message":"[6c0f7872-fb3f-4e72-96d2-d52063e9e966] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:49:35"}
+{"level":"info","message":"[6c0f7872-fb3f-4e72-96d2-d52063e9e966] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:49:35"}
+{"level":"info","message":"[9940f1a8-4253-478a-a870-a5c8ba34dc3d] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:50:00"}
+{"level":"info","message":"[e57fdd71-32cf-4f58-946f-5ee07a5e15c7] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:50:00"}
+{"level":"info","message":"[9940f1a8-4253-478a-a870-a5c8ba34dc3d] 204 POST /api/analytics (11ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:50:00"}
+{"level":"info","message":"[e57fdd71-32cf-4f58-946f-5ee07a5e15c7] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:50:00"}
+{"level":"info","message":"[5dc97018-d96c-4321-9b21-c332614eba50] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:28"}
+{"level":"info","message":"[e7f4d40e-f8bc-4baa-9e95-301eebf57be9] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:28"}
+{"level":"info","message":"[5dc97018-d96c-4321-9b21-c332614eba50] 204 POST /api/analytics (13ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:29"}
+{"level":"info","message":"[e7f4d40e-f8bc-4baa-9e95-301eebf57be9] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:29"}
+{"level":"info","message":"[3cedf469-5094-4b09-a57f-67716af65df3] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:32"}
+{"level":"info","message":"[9bdc6a5f-86ec-4004-a5b9-6a160c127e8a] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:32"}
+{"level":"info","message":"[3cedf469-5094-4b09-a57f-67716af65df3] 204 POST /api/analytics (16ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:32"}
+{"level":"info","message":"[9bdc6a5f-86ec-4004-a5b9-6a160c127e8a] 204 POST /api/analytics (16ms)","service":"fixmysite-backend","timestamp":"2025-08-16 16:54:32"}
+{"level":"info","message":"[a1cdb29c-3b3c-4739-b65d-bbfcb2be7160] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:50"}
+{"level":"info","message":"[a1cdb29c-3b3c-4739-b65d-bbfcb2be7160] 204 POST /api/analytics (42ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:50"}
+{"level":"info","message":"[0f17de3c-a13b-44e2-ac4f-82854fa8447b] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:52"}
+{"level":"info","message":"[0f17de3c-a13b-44e2-ac4f-82854fa8447b] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:52"}
+{"level":"info","message":"[56ef2cbe-05d0-415e-9be5-d12178f55f24] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:53"}
+{"level":"info","message":"[56ef2cbe-05d0-415e-9be5-d12178f55f24] 204 POST /api/analytics (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:53"}
+{"level":"info","message":"[cb236081-afc7-4623-99a6-7c0b470501ba] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:54"}
+{"level":"info","message":"[cb236081-afc7-4623-99a6-7c0b470501ba] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:04:54"}
+{"level":"info","message":"[93bc3ffd-28e4-482e-929a-019b20e61797] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:12:23"}
+{"level":"info","message":"[93bc3ffd-28e4-482e-929a-019b20e61797] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:12:23"}
+{"level":"info","message":"[ad2080ed-92fd-475b-9922-c723d907fc8c] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:04"}
+{"level":"info","message":"[ad2080ed-92fd-475b-9922-c723d907fc8c] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:04"}
+{"level":"info","message":"[47386a32-d3b2-426f-a1cd-b6179659284e] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:05"}
+{"level":"info","message":"[47386a32-d3b2-426f-a1cd-b6179659284e] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:05"}
+{"level":"info","message":"[0f1e2360-1f1b-4ed6-b399-af3b215caac3] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:06"}
+{"level":"info","message":"[0f1e2360-1f1b-4ed6-b399-af3b215caac3] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:06"}
+{"level":"info","message":"[0810ab2f-0a83-462c-8721-29777a836744] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:07"}
+{"level":"info","message":"[0810ab2f-0a83-462c-8721-29777a836744] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:07"}
+{"level":"info","message":"[02050d97-2269-4ecd-8cb8-38984c33f349] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:07"}
+{"level":"info","message":"[02050d97-2269-4ecd-8cb8-38984c33f349] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:07"}
+{"level":"info","message":"[f51f1923-a063-4e06-a0ad-68b18a56fd77] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:08"}
+{"level":"info","message":"[f51f1923-a063-4e06-a0ad-68b18a56fd77] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:08"}
+{"level":"info","message":"[8eb4b410-d087-48e9-a63b-8650513fc6db] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:09"}
+{"level":"info","message":"[8eb4b410-d087-48e9-a63b-8650513fc6db] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:09"}
+{"level":"info","message":"[608c6d56-0a98-4285-8bb1-6eb038348cde] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:11"}
+{"level":"info","message":"[608c6d56-0a98-4285-8bb1-6eb038348cde] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:11"}
+{"level":"info","message":"[b203f14e-53fe-4c34-98f8-e5d92a0841ce] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:13"}
+{"level":"info","message":"[b203f14e-53fe-4c34-98f8-e5d92a0841ce] 204 POST /api/analytics (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:13"}
+{"level":"info","message":"[9e41199b-83f0-4c6a-900b-4ba7bc11f0fc] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:26"}
+{"level":"info","message":"[9e41199b-83f0-4c6a-900b-4ba7bc11f0fc] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:23:26"}
+{"level":"info","message":"[b50da195-5911-45e9-ac89-e5c8ece4def1] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:24:44"}
+{"level":"info","message":"[4a5ed0b9-3787-4c59-baf9-77488c5d22e2] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:24:44"}
+{"level":"info","message":"[b50da195-5911-45e9-ac89-e5c8ece4def1] 204 POST /api/analytics (11ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:24:44"}
+{"level":"info","message":"[4a5ed0b9-3787-4c59-baf9-77488c5d22e2] 204 POST /api/analytics (11ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:24:44"}
+{"level":"info","message":"[8baa059c-63df-4ed5-b1a1-d54d7904c0ff] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:19"}
+{"level":"info","message":"[8427d1da-27df-4c2f-9d63-a8a9a1fc3ebb] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:19"}
+{"level":"info","message":"[8baa059c-63df-4ed5-b1a1-d54d7904c0ff] 204 POST /api/analytics (11ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:19"}
+{"level":"info","message":"[8427d1da-27df-4c2f-9d63-a8a9a1fc3ebb] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:19"}
+{"level":"info","message":"[3fd7e410-4e11-4b26-ba8c-f8ab9cd3b6a8] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:22"}
+{"level":"info","message":"[418d9fa8-c220-44d6-9b6d-b41abbcd731c] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:22"}
+{"level":"info","message":"[3fd7e410-4e11-4b26-ba8c-f8ab9cd3b6a8] 204 POST /api/analytics (13ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:22"}
+{"level":"info","message":"[418d9fa8-c220-44d6-9b6d-b41abbcd731c] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:25:22"}
+{"level":"info","message":"[aad2d475-e1c3-4fdb-bad7-e8e72a482853] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:11"}
+{"level":"info","message":"[aad2d475-e1c3-4fdb-bad7-e8e72a482853] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:11"}
+{"level":"info","message":"[ef9f531b-d179-49bb-8b06-f7e8380225a4] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:11"}
+{"level":"info","message":"[ef9f531b-d179-49bb-8b06-f7e8380225a4] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:11"}
+{"level":"info","message":"[55167fd0-3435-4efe-8228-a628c5306e07] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:16"}
+{"level":"info","message":"[55167fd0-3435-4efe-8228-a628c5306e07] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:16"}
+{"level":"info","message":"[9d88eba7-7f2b-4d3e-b814-92ba2a6e3848] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:19"}
+{"level":"info","message":"[9d88eba7-7f2b-4d3e-b814-92ba2a6e3848] 204 POST /api/analytics (9ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:19"}
+{"level":"info","message":"[061772c4-654e-49c6-9b25-f59d926fde19] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:21"}
+{"level":"info","message":"[061772c4-654e-49c6-9b25-f59d926fde19] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:21"}
+{"level":"info","message":"[fa8a7fd7-7412-4551-9845-266f8aeed146] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:23"}
+{"level":"info","message":"[55250547-ef91-4815-892a-f0a6b4d037bd] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:23"}
+{"level":"info","message":"[9ce78cbe-c8dd-4d04-a51f-49b5bd78b8c9] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:23"}
+{"level":"info","message":"[fa8a7fd7-7412-4551-9845-266f8aeed146] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:23"}
+{"level":"info","message":"[55250547-ef91-4815-892a-f0a6b4d037bd] 204 POST /api/analytics (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:23"}
+{"level":"info","message":"[9ce78cbe-c8dd-4d04-a51f-49b5bd78b8c9] 204 POST /api/analytics (14ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:23"}
+{"level":"info","message":"[0e188adf-e78e-497d-a34d-f5be3d25ea9c] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:25"}
+{"level":"info","message":"[0e188adf-e78e-497d-a34d-f5be3d25ea9c] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:25"}
+{"level":"info","message":"[96fb915a-6ead-4698-8a95-1c5aa73a35d6] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[96fb915a-6ead-4698-8a95-1c5aa73a35d6] 401 GET /api/service-requests (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[a4a3e3af-9afa-4369-8669-a4ce63782992] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[a4a3e3af-9afa-4369-8669-a4ce63782992] 401 GET /api/service-requests (2ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[2e443403-3221-4cf9-9897-ef5209ee87b1] POST /api/token/refresh from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[2e443403-3221-4cf9-9897-ef5209ee87b1] 200 POST /api/token/refresh (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[258b7c01-1fcb-4432-ba64-0aaca9679159] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[258b7c01-1fcb-4432-ba64-0aaca9679159] 200 GET /api/service-requests (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[9c930cc5-9255-428f-9875-00b2b769cb9c] POST /api/token/refresh from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"[9c930cc5-9255-428f-9875-00b2b769cb9c] 401 POST /api/token/refresh (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:27"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"[58eac294-9086-45af-ab80-2f959c7b0c97] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"[58eac294-9086-45af-ab80-2f959c7b0c97] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"User connected: 1 with socket ID 8APFG1ZnvobQRQGCAAAD","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"User connected: 1 with socket ID 0wHehRkCYxgD03vEAAAE","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"[da731830-1d06-4726-b785-721b7f4d78f7] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"[da731830-1d06-4726-b785-721b7f4d78f7] 204 POST /api/analytics (13ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 17:27:37"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:10"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:10"}
+{"level":"info","message":"User connected: 1 with socket ID QtTOhLYUBMrcME1GAAAG","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:10"}
+{"level":"info","message":"User connected: 1 with socket ID wxrMBXSJyEKvggQLAAAI","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:11"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[f1d2489f-d333-4693-8e4a-b8e3cc2a3f34] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[7240ae3b-952c-4ed3-9ffc-fbf72a97e8e2] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[f1d2489f-d333-4693-8e4a-b8e3cc2a3f34] 200 GET /api/service-requests (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[7240ae3b-952c-4ed3-9ffc-fbf72a97e8e2] 200 GET /api/service-requests (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"User connected: 1 with socket ID 2OJXgjd5-MCapzF0AAAM","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"User connected: 1 with socket ID 0dNL9w3_xRXzGFVcAAAN","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[2a644b44-f031-4078-a5d8-96c80b86f4b9] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[2a644b44-f031-4078-a5d8-96c80b86f4b9] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[5aa8569e-affb-4f0b-9533-43f170642a09] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"[5aa8569e-affb-4f0b-9533-43f170642a09] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:12"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[dac031eb-0ad9-4221-873c-5dd6e6e2fc90] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[686fd935-6d91-496d-b6f0-e0242a495a0b] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[4496c882-66b8-4272-9be9-b1158575c219] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[dac031eb-0ad9-4221-873c-5dd6e6e2fc90] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[686fd935-6d91-496d-b6f0-e0242a495a0b] 200 GET /api/credentials (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[4496c882-66b8-4272-9be9-b1158575c219] 200 GET /api/service-requests/active (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[c0f89e71-5ff7-42bb-a757-31c32c2b47d9] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[edb5c52e-1549-4dfa-adf7-f64d63757d97] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[c0f89e71-5ff7-42bb-a757-31c32c2b47d9] 304 GET /api/credentials (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[edb5c52e-1549-4dfa-adf7-f64d63757d97] 304 GET /api/service-requests/active (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[07f72d2a-682b-4d64-86cf-4a4e84da4268] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[b042554d-e3c3-49bd-a463-6c90459aee75] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[07f72d2a-682b-4d64-86cf-4a4e84da4268] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[b042554d-e3c3-49bd-a463-6c90459aee75] 402 GET /api/site-health-summary (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[83a96525-653e-4b9e-a02b-9a9983480c23] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[83a96525-653e-4b9e-a02b-9a9983480c23] 402 GET /api/site-health-summary (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:15"}
+{"level":"info","message":"[3e9db712-ca40-42d1-8bd8-01f31bfe35c8] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[adfe5e0b-be56-4461-9781-4b71c0c78a05] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[714ae751-ac9f-4085-bbca-f52aff317646] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[3e9db712-ca40-42d1-8bd8-01f31bfe35c8] 204 POST /api/analytics (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[adfe5e0b-be56-4461-9781-4b71c0c78a05] 304 GET /api/credentials (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[714ae751-ac9f-4085-bbca-f52aff317646] 304 GET /api/service-requests/active (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[ffe1ea48-e4e7-4113-b48e-dcb479b88358] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[10436936-2921-4eb2-bc3c-2549c55399b1] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[ffe1ea48-e4e7-4113-b48e-dcb479b88358] 200 GET /api/service-requests/active (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[10436936-2921-4eb2-bc3c-2549c55399b1] 200 GET /api/credentials (4ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:16"}
+{"level":"info","message":"[f2032ef4-086e-4014-9476-21b375c15ac1] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:17"}
+{"level":"info","message":"[f2032ef4-086e-4014-9476-21b375c15ac1] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:17"}
+{"level":"info","message":"[2988170b-bb2e-46f7-8fc6-acb920d97a7b] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:19"}
+{"level":"info","message":"[7ba10d9f-c241-44b5-91ef-d920cca2ebf4] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:19"}
+{"level":"info","message":"[2988170b-bb2e-46f7-8fc6-acb920d97a7b] 402 GET /api/site-health-summary (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:19"}
+{"level":"info","message":"[7ba10d9f-c241-44b5-91ef-d920cca2ebf4] 402 GET /api/site-health-summary (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:19"}
+{"level":"info","message":"[e67f6fdc-5877-412c-8256-d63c364da1ff] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:20"}
+{"level":"info","message":"[e67f6fdc-5877-412c-8256-d63c364da1ff] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:20"}
+{"level":"info","message":"[4d297437-9bbb-4879-9c16-c72c026c74dd] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:20"}
+{"level":"info","message":"[4d297437-9bbb-4879-9c16-c72c026c74dd] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:28:20"}
+{"level":"info","message":"User connected: 1 with socket ID Z5w5WKrKkscOypyEAAAP","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:00"}
+{"level":"info","message":"User connected: 1 with socket ID fXk9kD3oIxlOsTfuAAAR","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:12"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:21"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:21"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:21"}
+{"level":"info","message":"User connected: 1 with socket ID dhrgyM2ksGRgg_bcAAAU","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:22"}
+{"level":"info","message":"User connected: 1 with socket ID TCnumcJ3e_Zb7ctgAAAV","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:22"}
+{"level":"info","message":"User connected: 1 with socket ID aQnIR-bf4-IGWhQVAAAX","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:23"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:23"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:23"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:23"}
+{"level":"info","message":"[614711b5-24f6-4cfa-9228-e4d2a5b34637] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:24"}
+{"level":"info","message":"[3c98c321-c1d3-4376-9fa7-ed37053479ec] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:24"}
+{"level":"info","message":"[614711b5-24f6-4cfa-9228-e4d2a5b34637] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:24"}
+{"level":"info","message":"[3c98c321-c1d3-4376-9fa7-ed37053479ec] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:24"}
+{"level":"info","message":"User connected: 1 with socket ID IMJX0oTipkOvDIHfAAAZ","service":"fixmysite-backend","timestamp":"2025-08-16 17:29:24"}
+{"level":"info","message":"[3378667c-6806-4442-bbdc-a690cdda2a2e] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[3378667c-6806-4442-bbdc-a690cdda2a2e] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[4b7a1f81-2c83-41b6-9459-d2483a8d09dd] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[4b7a1f81-2c83-41b6-9459-d2483a8d09dd] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[f97e34eb-88e6-4c35-8206-78659ab56c8d] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[2dee5777-4810-47d6-bb89-5158777d77c8] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[f97e34eb-88e6-4c35-8206-78659ab56c8d] 204 POST /api/analytics (13ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[2dee5777-4810-47d6-bb89-5158777d77c8] 204 POST /api/analytics (12ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:00"}
+{"level":"info","message":"[c1853a67-8871-4683-865e-c6d8eb05c31d] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:33"}
+{"level":"info","message":"[c1853a67-8871-4683-865e-c6d8eb05c31d] 304 GET /api/health (0ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:33"}
+{"level":"info","message":"[53d18eb3-9688-4102-8015-23363f31c1f4] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[6f5f9b1d-2815-404f-b52b-f0d235f8a224] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[53d18eb3-9688-4102-8015-23363f31c1f4] 200 GET /api/health (2ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[6f5f9b1d-2815-404f-b52b-f0d235f8a224] 200 GET /api/health (2ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[cc592b4a-c2b5-4af1-8b26-131fbf20069e] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[e04e4a37-0e3c-4ebd-8fda-2721da243215] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[cc592b4a-c2b5-4af1-8b26-131fbf20069e] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[e04e4a37-0e3c-4ebd-8fda-2721da243215] 204 POST /api/analytics (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:30:44"}
+{"level":"info","message":"[9c2477f9-8aa3-4b00-ad4b-aaabeb6a8f7d] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:31:03"}
+{"level":"info","message":"[9c2477f9-8aa3-4b00-ad4b-aaabeb6a8f7d] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:31:03"}
+{"level":"info","message":"[f95eba72-87ff-459d-85d5-94bcf765618e] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:31:31"}
+{"level":"info","message":"[f95eba72-87ff-459d-85d5-94bcf765618e] 200 GET /api/health (0ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:31:31"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:10"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:10"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:10"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:10"}
+{"level":"info","message":"User connected: 1 with socket ID LmawTcQzD5-6W9AQAAAB","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:11"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:20"}
+{"level":"info","message":"User connected: 1 with socket ID ruh4WVIdUGxd5Kt5AAAD","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:22"}
+{"level":"info","message":"User disconnected: 1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:22"}
+{"level":"info","message":"[adb2604e-00e3-46e0-b889-4bcc8df590bd] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[b6486791-b8ed-43d8-9344-f339da866637] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[adb2604e-00e3-46e0-b889-4bcc8df590bd] 200 GET /api/health (7ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[b6486791-b8ed-43d8-9344-f339da866637] 200 GET /api/health (5ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[fa8da903-2daa-4453-88c1-95db965c17e0] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[a12e12d5-bb03-427f-96ab-2eddd4e7b95f] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"User connected: 1 with socket ID eUYBbqihJ8Foh8tjAAAF","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[fa8da903-2daa-4453-88c1-95db965c17e0] 204 POST /api/analytics (20ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[a12e12d5-bb03-427f-96ab-2eddd4e7b95f] 204 POST /api/analytics (23ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:24"}
+{"level":"info","message":"[550ddcf5-183b-460d-b606-1f3c4c36c22e] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:30"}
+{"level":"info","message":"[550ddcf5-183b-460d-b606-1f3c4c36c22e] 204 POST /api/analytics (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:30"}
+{"level":"info","message":"[91da5865-7577-4b31-834e-9c6c5018475a] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:30"}
+{"level":"info","message":"[91da5865-7577-4b31-834e-9c6c5018475a] 204 POST /api/analytics (9ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:30"}
+{"level":"info","message":"[837f6ae2-1f2f-4719-8166-cbef9c843fbd] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:32"}
+{"level":"info","message":"[837f6ae2-1f2f-4719-8166-cbef9c843fbd] 402 GET /api/site-health-summary (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:32"}
+{"level":"info","message":"[aaceb226-6d33-4f09-a163-e6b808c1b582] GET /api/site-health-summary from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:32"}
+{"level":"info","message":"[aaceb226-6d33-4f09-a163-e6b808c1b582] 402 GET /api/site-health-summary (2ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:32"}
+{"level":"info","message":"[d8e7cfdc-b555-48e6-b681-27dbd05f8df7] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[5b3d1b97-8a8f-46e5-9630-a8b9461b859a] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[024b5f6e-3cd8-4e7a-acc8-650f87408761] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[f31c2098-b419-4804-985a-ad004970b5e5] GET /api/credentials from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[275f3ac5-a3e7-41af-a039-0f6ad33870e8] GET /api/service-requests/active from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[d8e7cfdc-b555-48e6-b681-27dbd05f8df7] 204 POST /api/analytics (27ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[5b3d1b97-8a8f-46e5-9630-a8b9461b859a] 200 GET /api/credentials (17ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[275f3ac5-a3e7-41af-a039-0f6ad33870e8] 200 GET /api/service-requests/active (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[f31c2098-b419-4804-985a-ad004970b5e5] 200 GET /api/credentials (17ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[024b5f6e-3cd8-4e7a-acc8-650f87408761] 200 GET /api/service-requests/active (19ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:33"}
+{"level":"info","message":"[a5fbca22-6913-400d-be62-0dcb3ab96fa0] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:34"}
+{"level":"info","message":"[a5fbca22-6913-400d-be62-0dcb3ab96fa0] 204 POST /api/analytics (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:34"}
+{"level":"info","message":"User connected: 1 with socket ID BrX1GRrk5ryap0MsAAAI","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:34"}
+{"level":"info","message":"[d088644c-5cfb-4f7c-9c13-3e453888b97e] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:36"}
+{"level":"info","message":"[d088644c-5cfb-4f7c-9c13-3e453888b97e] 200 GET /api/service-requests (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:36"}
+{"level":"info","message":"[17aa4334-1df9-4de7-bae2-d8a7cc74c491] GET /api/service-requests from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:36"}
+{"level":"info","message":"[17aa4334-1df9-4de7-bae2-d8a7cc74c491] 200 GET /api/service-requests (3ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:36"}
+{"level":"info","message":"[a1021031-41da-497b-ad71-642e892a541f] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:56"}
+{"level":"info","message":"[a1021031-41da-497b-ad71-642e892a541f] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:32:56"}
+{"level":"info","message":"[26b1b2eb-6d3f-4b12-b69c-3ccc97e26c06] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:33:26"}
+{"level":"info","message":"[26b1b2eb-6d3f-4b12-b69c-3ccc97e26c06] 304 GET /api/health (2ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:33:26"}
+{"level":"info","message":"[550a3cd5-04d5-437a-a6c3-7df49b6c615c] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:33:57"}
+{"level":"info","message":"[550a3cd5-04d5-437a-a6c3-7df49b6c615c] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:33:57"}
+{"level":"info","message":"[d9915019-88c5-42e0-829b-1197ca826e55] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:34:27"}
+{"level":"info","message":"[d9915019-88c5-42e0-829b-1197ca826e55] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:34:27"}
+{"level":"info","message":"[d8b63a90-5f92-436c-967e-3978db2b09f2] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:34:55"}
+{"level":"info","message":"[d8b63a90-5f92-436c-967e-3978db2b09f2] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:34:55"}
+{"level":"info","message":"[d4763fdd-f760-4a16-8a10-b3fe56a0f5de] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:35:27"}
+{"level":"info","message":"[d4763fdd-f760-4a16-8a10-b3fe56a0f5de] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:35:27"}
+{"level":"info","message":"[bef33af4-d0b7-40c3-9253-70a70c572b72] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:35:58"}
+{"level":"info","message":"[bef33af4-d0b7-40c3-9253-70a70c572b72] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:35:58"}
+{"level":"info","message":"[b2136d5b-6cfc-4991-839a-9ebbdb33da3a] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:36:28"}
+{"level":"info","message":"[b2136d5b-6cfc-4991-839a-9ebbdb33da3a] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:36:28"}
+{"level":"info","message":"[74e489e2-1457-47f3-a50f-247ef630ca4c] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:36:58"}
+{"level":"info","message":"[74e489e2-1457-47f3-a50f-247ef630ca4c] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:36:58"}
+{"level":"info","message":"[28db5830-5f61-41ae-8051-2483254d6f07] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:37:26"}
+{"level":"info","message":"[28db5830-5f61-41ae-8051-2483254d6f07] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:37:26"}
+{"level":"info","message":"[e6764034-124d-427b-b1d3-7d1660e05d9c] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:37:59"}
+{"level":"info","message":"[e6764034-124d-427b-b1d3-7d1660e05d9c] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:37:59"}
+{"level":"info","message":"[78140d18-ad13-4d48-8703-3dfef20d2e2d] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:38:29"}
+{"level":"info","message":"[78140d18-ad13-4d48-8703-3dfef20d2e2d] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:38:29"}
+{"level":"info","message":"[27ef1111-644f-4644-ac05-c78f89cb0b01] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:38:59"}
+{"level":"info","message":"[27ef1111-644f-4644-ac05-c78f89cb0b01] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:38:59"}
+{"level":"info","message":"[b545881e-d4aa-4de9-9de9-21a03123a42a] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:39:30"}
+{"level":"info","message":"[b545881e-d4aa-4de9-9de9-21a03123a42a] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:39:30"}
+{"level":"info","message":"[b1d90042-9686-48d9-a311-315534a445e6] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:40:00"}
+{"level":"info","message":"[b1d90042-9686-48d9-a311-315534a445e6] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:40:00"}
+{"level":"info","message":"[d304ac8b-15e9-41fa-aecb-dce809afbc15] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:40:31"}
+{"level":"info","message":"[d304ac8b-15e9-41fa-aecb-dce809afbc15] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:40:31"}
+{"level":"info","message":"[901daa29-646d-4f51-9c15-a958894030b5] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:41:01"}
+{"level":"info","message":"[901daa29-646d-4f51-9c15-a958894030b5] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:41:01"}
+{"level":"info","message":"[10e84648-0ec9-4e56-8a20-2e5950f60b6c] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:41:31"}
+{"level":"info","message":"[10e84648-0ec9-4e56-8a20-2e5950f60b6c] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:41:31"}
+{"level":"info","message":"[073003ef-7768-4f4e-befc-9c81914e870d] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:42:02"}
+{"level":"info","message":"[073003ef-7768-4f4e-befc-9c81914e870d] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:42:02"}
+{"level":"info","message":"[aa41c815-c34e-4879-aaac-2a5d409356f2] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:42:32"}
+{"level":"info","message":"[aa41c815-c34e-4879-aaac-2a5d409356f2] 304 GET /api/health (0ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:42:32"}
+{"level":"info","message":"[9171d00d-1893-4fe9-85ab-8af30f9f01c8] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:43:02"}
+{"level":"info","message":"[9171d00d-1893-4fe9-85ab-8af30f9f01c8] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:43:02"}
+{"level":"info","message":"[57fd99cc-7817-4d21-abc7-13a0f93aad4b] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:43:33"}
+{"level":"info","message":"[57fd99cc-7817-4d21-abc7-13a0f93aad4b] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:43:33"}
+{"level":"info","message":"[c5bb3386-be09-461b-b977-027b6528e4cb] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:44:03"}
+{"level":"info","message":"[c5bb3386-be09-461b-b977-027b6528e4cb] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:44:03"}
+{"level":"info","message":"[575b9f50-75c0-455f-92cd-3b21e8b2cacc] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:44:33"}
+{"level":"info","message":"[575b9f50-75c0-455f-92cd-3b21e8b2cacc] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:44:33"}
+{"level":"info","message":"[b2577af6-0a9e-436b-becc-7a1c04d603d1] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:45:03"}
+{"level":"info","message":"[b2577af6-0a9e-436b-becc-7a1c04d603d1] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:45:03"}
+{"level":"info","message":"[de065d2c-ab25-4156-b45c-76e25f21ce81] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:45:34"}
+{"level":"info","message":"[de065d2c-ab25-4156-b45c-76e25f21ce81] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:45:34"}
+{"level":"info","message":"[6a003b8d-65b0-4be8-87b5-acf5c21e11f9] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:46:04"}
+{"level":"info","message":"[6a003b8d-65b0-4be8-87b5-acf5c21e11f9] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:46:04"}
+{"level":"info","message":"[4dbab168-b718-4596-a4b5-e7a6c5573fa4] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:46:34"}
+{"level":"info","message":"[4dbab168-b718-4596-a4b5-e7a6c5573fa4] 304 GET /api/health (0ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:46:34"}
+{"level":"info","message":"[afbb2dc1-5e38-4ebc-b099-123eb9fe57d8] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:47:03"}
+{"level":"info","message":"[afbb2dc1-5e38-4ebc-b099-123eb9fe57d8] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:47:03"}
+{"level":"info","message":"[6dbe412b-d29b-4388-af3c-46751bb7ed9a] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:47:35"}
+{"level":"info","message":"[6dbe412b-d29b-4388-af3c-46751bb7ed9a] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:47:35"}
+{"level":"info","message":"[78a01e5f-3d9c-4af8-b932-ad3ed151e38d] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:48:03"}
+{"level":"info","message":"[78a01e5f-3d9c-4af8-b932-ad3ed151e38d] 304 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:48:03"}
+{"level":"info","message":"[7b5a034d-0fee-4011-a584-c4cd7e985685] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:48:33"}
+{"level":"info","message":"[7b5a034d-0fee-4011-a584-c4cd7e985685] 200 GET /api/health (1ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:48:33"}
+{"level":"info","message":"[7d264223-8dfa-453d-81a0-af619c5fa7fa] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 17:49:06"}
+{"level":"info","message":"[7d264223-8dfa-453d-81a0-af619c5fa7fa] 304 GET /api/health (0ms)","service":"fixmysite-backend","timestamp":"2025-08-16 17:49:06"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:29"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:29"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:29"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:29"}
+{"level":"info","message":"[7278bedb-6c8d-4686-a85d-392769907b3c] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[e6484411-79b7-4fd0-b104-9f66f86513ff] GET /api/health from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[7278bedb-6c8d-4686-a85d-392769907b3c] 200 GET /api/health (6ms)","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[e6484411-79b7-4fd0-b104-9f66f86513ff] 200 GET /api/health (8ms)","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[3292a9ef-71ba-4f57-a7de-b248174e9a69] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[cc45901d-44da-4306-9079-fe0e963342fe] POST /api/analytics from ::ffff:127.0.0.1","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[3292a9ef-71ba-4f57-a7de-b248174e9a69] 204 POST /api/analytics (21ms)","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[cc45901d-44da-4306-9079-fe0e963342fe] 204 POST /api/analytics (15ms)","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:37"}
+{"level":"info","message":"[b1393941-a751-47b7-a361-f4d685c53f60] POST /api/checkout from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:44"}
+{"level":"info","message":"[b1393941-a751-47b7-a361-f4d685c53f60] 401 POST /api/checkout (2ms)","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:44"}
+{"level":"info","message":"[5b106667-807d-4b6c-a9d8-e9061cc19983] POST /api/token/refresh from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:44"}
+{"level":"info","message":"[5b106667-807d-4b6c-a9d8-e9061cc19983] 200 POST /api/token/refresh (16ms)","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:44"}
+{"level":"info","message":"[652e4830-0830-45bb-857a-2454852391bf] POST /api/checkout from ::1","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:44"}
+{"level":"info","message":"[652e4830-0830-45bb-857a-2454852391bf] 200 POST /api/checkout (1314ms)","service":"fixmysite-backend","timestamp":"2025-08-16 18:03:46"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 19:04:58"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:04:58"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:04:58"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:04:58"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 19:05:28"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:05:28"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:05:28"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:05:28"}
+{"address":"::","code":"EADDRINUSE","errno":-4091,"level":"error","message":"Uncaught Exception: listen EADDRINUSE: address already in use :::3001","port":3001,"service":"fixmysite-backend","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n    at listenInCluster (node:net:1997:12)\n    at Server.listen (node:net:2102:7)\n    at Object.<anonymous> (C:\\Users\\wrc02\\Desktop\\FixMy.Site\\backend\\server.js:1948:8)\n    at Module._compile (node:internal/modules/cjs/loader:1688:14)\n    at Object..js (node:internal/modules/cjs/loader:1820:10)\n    at Module.load (node:internal/modules/cjs/loader:1423:32)\n    at Function._load (node:internal/modules/cjs/loader:1246:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)","syscall":"listen","timestamp":"2025-08-16 19:05:45"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:05:46"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:05:46"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:05:46"}
+{"address":"::","code":"EADDRINUSE","errno":-4091,"level":"error","message":"Uncaught Exception: listen EADDRINUSE: address already in use :::3001","port":3001,"service":"fixmysite-backend","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n    at listenInCluster (node:net:1997:12)\n    at Server.listen (node:net:2102:7)\n    at Object.<anonymous> (C:\\Users\\wrc02\\Desktop\\FixMy.Site\\backend\\server.js:1948:8)\n    at Module._compile (node:internal/modules/cjs/loader:1688:14)\n    at Object..js (node:internal/modules/cjs/loader:1820:10)\n    at Module.load (node:internal/modules/cjs/loader:1423:32)\n    at Function._load (node:internal/modules/cjs/loader:1246:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)","syscall":"listen","timestamp":"2025-08-16 19:06:20"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:06:20"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:06:20"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:06:21"}
+{"address":"::","code":"EADDRINUSE","errno":-4091,"level":"error","message":"Uncaught Exception: listen EADDRINUSE: address already in use :::3001","port":3001,"service":"fixmysite-backend","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n    at listenInCluster (node:net:1997:12)\n    at Server.listen (node:net:2102:7)\n    at Object.<anonymous> (C:\\Users\\wrc02\\Desktop\\FixMy.Site\\backend\\server.js:1948:8)\n    at Module._compile (node:internal/modules/cjs/loader:1688:14)\n    at Object..js (node:internal/modules/cjs/loader:1820:10)\n    at Module.load (node:internal/modules/cjs/loader:1423:32)\n    at Function._load (node:internal/modules/cjs/loader:1246:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)","syscall":"listen","timestamp":"2025-08-16 19:06:27"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:06:27"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:06:27"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:06:28"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 19:14:41"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:14:41"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:14:41"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:14:42"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 19:15:13"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:15:13"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:15:13"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:15:13"}
+{"level":"info","message":"Server is running on port 3001","service":"fixmysite-backend","timestamp":"2025-08-16 19:23:33"}
+{"level":"info","message":"Connected to the SQLite database.","service":"fixmysite-backend","timestamp":"2025-08-16 19:23:33"}
+{"level":"info","message":"Foreign key constraints enabled.","service":"fixmysite-backend","timestamp":"2025-08-16 19:23:33"}
+{"0":"r","1":"e","2":"a","3":"s","4":"o","5":"n","6":":","code":"TokenInvalid","level":"error","message":"Unhandled Rejection at:","service":"fixmysite-backend","timestamp":"2025-08-16 19:23:34"}

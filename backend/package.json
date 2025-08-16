@@ -8,13 +8,16 @@
     "dev": "nodemon server.js",
     "deploy-commands": "node deploy-commands.js",
     "wipe:tickets": "node scripts/wipeTickets.js",
-    "wipe:service-requests": "node scripts/wipeServiceRequests.js"
+    "wipe:service-requests": "node scripts/wipeServiceRequests.js",
+    "setup:stripe": "node scripts/setupStripe.js",
+    "test:stripe": "node scripts/testStripe.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@discordjs/rest": "^2.5.1",
+    "@radix-ui/react-dialog": "^1.1.15",
     "axios": "^1.11.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
@@ -28,6 +31,7 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "libphonenumber-js": "^1.10.53",
+    "lucide-react": "^0.539.0",
     "multer": "^2.0.2",
     "node-cron": "^4.2.1",
     "nodemailer": "^7.0.5",
