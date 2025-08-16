@@ -15,19 +15,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
     "@stripe/react-stripe-js": "^3.9.0",
     "@stripe/stripe-js": "^7.8.0",
     "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "helmet": "^8.1.0",
     "libphonenumber-js": "^1.12.10",
     "lucide-react": "^0.536.0",
     "node-fetch": "^3.3.2",
+    "posthog-js": "^1.260.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.7.1",
     "react-turnstile": "^1.1.4",
     "recharts": "^3.1.2",
-    "socket.io-client": "^4.8.1"
+    "socket.io-client": "^4.8.1",
+    "tailwind-merge": "^3.3.1"
   },
   "description": "",
   "devDependencies": {
@@ -37,6 +41,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
+    "terser": "^5.43.1",
     "vite": "^6.3.5"
   }
 }

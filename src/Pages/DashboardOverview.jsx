@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import { trackEvent } from '@/utils/analytics';
 import { Card, CardContent, CardHeader, CardTitle } from "../Components/ui/card";
 
 export default function DashboardOverview() {
-  useEffect(() => { trackEvent('page_view', { path: '/dashboard' }); }, []);
+  useEffect(() => { }, []);
   return (
     <div className="space-y-6">
       <Card>

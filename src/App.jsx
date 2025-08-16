@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./Components/Layout.jsx";
 import { useEffect } from 'react';
-import { trackPageView } from '@/utils/analytics';
 import DashboardLayout from "./Components/dashboard/DashboardLayout.jsx";
 import DashboardOverview from "./Pages/DashboardOverview.jsx";
 import DashboardRequests from "./Pages/DashboardRequests.jsx";
@@ -23,29 +22,36 @@ import DashboardTicket from "./Pages/DashboardTicket.jsx";
 import DashboardSubscription from "./Pages/DashboardSubscription.jsx";
 import KnowledgeBase from "./Pages/KnowledgeBase.jsx";
 import DashboardAnalytics from "./Pages/DashboardAnalytics.jsx";
-import DashboardBilling from "./Pages/DashboardBilling.jsx";
+
 import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx";
 import TermsAndConditions from "./Pages/TermsAndConditions.jsx";
 import RefundPolicy from "./Pages/RefundPolicy.jsx";
-import AdminProducts from "./Pages/AdminProducts.jsx";
+import AdminCalendar from "./Pages/AdminProducts.jsx";
 import AdminQuotes from "./Pages/AdminQuotes.jsx";
 import AdminInvoices from "./Pages/AdminInvoices.jsx";
 import ViewQuote from "./Pages/ViewQuote.jsx";
 import PayInvoice from "./Pages/PayInvoice.jsx";
 
-function AnalyticsWrapper({ children }) {
+import posthog from 'posthog-js';
+
+const PostHogPageViewTracker = () => {
   const location = useLocation();
+
   useEffect(() => {
-    trackPageView(location.pathname);
-  }, [location.pathname]);
-  return children;
-}
+    // Track page views
+    if (import.meta.env.VITE_POSTHOG_KEY) {
+      posthog.capture('$pageview');
+    }
+  }, [location]);
+
+  return null;
+};
 
 function App() {
   return (
     <Router>
+      <PostHogPageViewTracker />
       <Layout>
-        <AnalyticsWrapper>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -83,14 +89,13 @@ function App() {
             <Route path="ticket/:ticketId" element={<DashboardTicket />} />
             <Route path="subscription" element={<DashboardSubscription />} />
             <Route path="analytics" element={<DashboardAnalytics />} />
-            <Route path="billing" element={<DashboardBilling />} />
-            <Route path="admin/products" element={<AdminProducts />} />
+
+            <Route path="admin/calendar" element={<AdminCalendar />} />
             <Route path="admin/quotes" element={<AdminQuotes />} />
             <Route path="admin/quotes/new" element={<AdminQuotes />} />
             <Route path="admin/invoices" element={<AdminInvoices />} />
           </Route>
         </Routes>
-        </AnalyticsWrapper>
       </Layout>
     </Router>
   );

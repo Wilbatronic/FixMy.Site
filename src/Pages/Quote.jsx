@@ -1,6 +1,7 @@
 import React from "react";
 import QuoteCalculator from "../Components/quote/QuoteCalculator.jsx";
 import { Card, CardContent, CardHeader, CardTitle } from "../Components/ui/card";
+import posthogClient from "@/services/posthog";
 
 export default function Quote() {
   const handleQuoteCalculation = (data) => {

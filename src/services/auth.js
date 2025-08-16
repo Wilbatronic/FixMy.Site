@@ -1,3 +1,5 @@
+import posthogClient from './posthog';
+
 const API_URL = '/api/';
 
 const register = (name, email, password, website_url, phone_country, phone_number, confirmPassword) => {
@@ -31,6 +33,10 @@ const login = async (email, password) => {
       const me = meRes.ok ? await meRes.json() : {};
       const merged = { ...data, ...me };
       localStorage.setItem('user', JSON.stringify(merged));
+      posthogClient.identify(merged.id, {
+        email: merged.email,
+        name: merged.name,
+      });
       return merged;
     } catch (_) {
       localStorage.setItem('user', JSON.stringify(data));
@@ -78,6 +84,7 @@ const refreshAccessToken = async () => {
 
 const logout = () => {
   localStorage.removeItem('user');
+  posthogClient.reset();
 };
 
 const getCurrentUser = () => {

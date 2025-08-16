@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import authService from "../../services/auth";
-import { trackEvent } from "@/utils/analytics";
 
 export default function ChatInterface() {
   const [messages, setMessages] = useState([
@@ -73,7 +72,7 @@ export default function ChatInterface() {
       const data = await response.json();
       
       // Best-effort analytics for chat prompt
-      trackEvent('ai_prompt', { path: '/ai-chat' });
+      // trackEvent('ai_prompt', { path: '/ai-chat' }); // This line is removed as per the edit hint.
 
       const assistantMessage = {
         role: "assistant",

@@ -131,7 +131,15 @@ export default function DashboardRequests() {
                 ) : (
                   <p className="text-sm text-gray-500">Processing your request...</p>
                 )}
-                <Button onClick={() => handleCreateQuote(request)}>Create Quote</Button>
+                {authService.getCurrentUser()?.is_admin && (
+                  <Button 
+                    onClick={() => handleCreateQuote(request)}
+                    className="mt-2"
+                    size="sm"
+                  >
+                    Create Quote
+                  </Button>
+                )}
               </CardContent>
             </Card>
           );

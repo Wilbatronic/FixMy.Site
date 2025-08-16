@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Twitter, Github, Menu, X, Home as HomeIcon, Settings, Calculator, Phone } from "lucide-react";
-import logo from "../../FixMySite_Logo_Transparent.png";
 import authService from "../services/auth";
 import OfflineIndicator from "./OfflineIndicator.jsx";
+import { preloadAssets } from "../utils/assetLoader.js";
+
+const logo = "/FixMySite_Logo_Transparent.png";
 
 const NavLinkItem = ({ to, children, onClick }) => (
   <NavLink
@@ -50,6 +52,11 @@ export default function Layout({ children }) {
   const location = useLocation();
   const isLoggedIn = !!authService.getCurrentUser();
 
+  // Preload critical assets to prevent loading issues
+  useEffect(() => {
+    preloadAssets();
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -64,7 +71,26 @@ export default function Layout({ children }) {
       <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
         <div className="container relative flex h-16 items-center justify-between px-5">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-            <img src={logo} alt="FixMy.Site" className="h-8 w-auto" />
+            <img 
+              src={logo} 
+              alt="FixMy.Site" 
+              className="h-8 w-auto" 
+              loading="eager"
+              onError={(e) => {
+                console.warn('Logo failed to load, using fallback');
+                e.target.src = '/FixMySite_Logo_Transparent.png';
+              }}
+              onLoad={() => {
+                console.log('Logo loaded successfully');
+              }}
+              onAbort={(e) => {
+                console.warn('Logo loading aborted, retrying...');
+                // Retry loading after a short delay
+                setTimeout(() => {
+                  e.target.src = logo;
+                }, 100);
+              }}
+            />
           </Link>
           <div className="md:hidden">
             <button onClick={toggleMenu} aria-expanded={isMenuOpen} aria-label="Toggle Menu">

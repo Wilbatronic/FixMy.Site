@@ -11,13 +11,18 @@ export default defineConfig({
     },
   },
   server: {
+    https: process.env.VITE_ENABLE_HTTPS === 'true' ? {
+      // Self-signed certificate for development
+      key: undefined,
+      cert: undefined,
+    } : false,
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        target: process.env.VITE_API_URL || 'http://localhost:3001',
         changeOrigin: true,
       },
       '/socket.io': {
-        target: 'ws://localhost:3001',
+        target: process.env.VITE_API_URL?.replace('http', 'ws') || 'ws://localhost:3001',
         ws: true,
       },
     },
@@ -39,7 +44,7 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['lucide-react'],
-          utils: ['axios', 'socket.io-client'],
+          utils: ['socket.io-client'],
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',

@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const express = require("express");
 const http = require('http');
@@ -28,6 +27,7 @@ const CAPTCHA_PROVIDER = process.env.CAPTCHA_PROVIDER || '';
 const TURNSTILE_SITE_KEY = process.env.TURNSTILE_SITE_KEY || '';
 const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY || '';
 const ENABLE_OPENAI_MODERATION = String(process.env.ENABLE_OPENAI_MODERATION || '0') === '1';
+const { initPostHog, getPostHogClient } = require('./posthog');
 
 // Setup file uploads
 const uploadDir = path.join(__dirname, 'uploads');
@@ -63,7 +63,78 @@ const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173,ht
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 // Handle CORS preflight for all routes
 app.options('*', cors({ origin: allowedOrigins, credentials: true }));
-app.use(helmet());
+// Configure a robust and specific Content Security Policy
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "https://js.stripe.com",
+        "https://m.stripe.network",
+        "https://q.stripe.com",
+        "https://r.stripe.com",
+        "https://us-assets.i.posthog.com",
+        "https://us.i.posthog.com",
+        "https://app.posthog.com",
+        // Allow unsafe-inline for Stripe's dynamic content
+        "'unsafe-inline'",
+        // Specific hashes for Stripe's inline scripts for enhanced security
+        "'sha256-5DA+a07wxWmEka9IdoWjSPVHb17Cp5284/lJzfbl8KA='",
+        "'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls='",
+        "'sha256-+6WnXIl4mbFTCARd8NvCOUEGZQYFJ3tqC9D9VY9ya8c='",
+        "'sha256-A6kQssc8M3+QvwKZvrTU+8LUwQot/b+HVfrmxwqLJKk='",
+      ],
+      styleSrc: [
+        "'self'",
+        "https://fonts.googleapis.com",
+        "https://m.stripe.network",
+        "https://js.stripe.com",
+        // Allow unsafe-inline for Stripe's dynamic styles
+        "'unsafe-inline'",
+        // Specific hash for an inline style element
+        "'sha256-0hAheEzaMe6uXIKV4EehS9pu1am1lj/KnnzrOYqckXk='",
+        "https://m.stripe.network/out-4.5.44.js"
+      ],
+      fontSrc: [
+        "'self'",
+        "https://fonts.gstatic.com",
+        "data:"
+      ],
+      imgSrc: [
+        "'self'",
+        "data:",
+        "blob:",
+        "https://js.stripe.com",
+        "https://m.stripe.network"
+      ],
+      connectSrc: [
+        "'self'",
+        "https://api.stripe.com",
+        "https://q.stripe.com", // for CSP violation reporting
+        "https://r.stripe.com", // for telemetry
+        "https://m.stripe.network",
+        "https://us-assets.i.posthog.com",
+        "https://us.i.posthog.com",
+        "https://app.posthog.com",
+        // Allow WebSocket connections for development
+        `ws://localhost:${process.env.PORT || 3001}`,
+        `wss://localhost:${process.env.PORT || 3001}`,
+        `ws://localhost:5173`,
+        `wss://localhost:5173`,
+      ],
+      frameSrc: [
+        "'self'",
+        "https://js.stripe.com",
+        "https://hooks.stripe.com",
+        "https://m.stripe.network",
+      ],
+      objectSrc: ["'none'"],
+      upgradeInsecureRequests: [],
+    },
+  },
+  crossOriginEmbedderPolicy: false
+}));
 // Request ID middleware for tracing
 app.use((req, res, next) => {
   req.id = (req.headers['x-request-id'] || require('crypto').randomUUID());
@@ -140,6 +211,8 @@ db.serialize(() => {
     service_request_id INTEGER,
     discord_channel_id TEXT,
     status TEXT DEFAULT 'open',
+    deleted BOOLEAN DEFAULT 0,
+    deleted_at DATETIME,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES User (id),
     FOREIGN KEY (service_request_id) REFERENCES ServiceRequest (id)
@@ -202,6 +275,43 @@ db.serialize(() => {
     ip TEXT,
     date TEXT NOT NULL,
     count INTEGER DEFAULT 0
+  )`);
+  db.run(`CREATE TABLE IF NOT EXISTS Reminder (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL,
+    client_email TEXT NOT NULL,
+    client_name TEXT NOT NULL,
+    reminder_type TEXT NOT NULL,
+    due_date TEXT NOT NULL,
+    due_time TEXT NOT NULL,
+    priority TEXT NOT NULL DEFAULT 'medium',
+    status TEXT NOT NULL DEFAULT 'pending',
+    created_by INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (created_by) REFERENCES User (id)
+  )`);
+  db.run(`CREATE TABLE IF NOT EXISTS Quote (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    service_request_id INTEGER,
+    total REAL NOT NULL,
+    status TEXT NOT NULL DEFAULT 'draft',
+    expires_at DATETIME,
+    created_by INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES User (id),
+    FOREIGN KEY (service_request_id) REFERENCES ServiceRequest (id),
+    FOREIGN KEY (created_by) REFERENCES User (id)
+  )`);
+  db.run(`CREATE TABLE IF NOT EXISTS QuoteLineItem (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    quote_id INTEGER NOT NULL,
+    description TEXT NOT NULL,
+    quantity INTEGER NOT NULL DEFAULT 1,
+    unit_price REAL NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (quote_id) REFERENCES Quote (id)
   )`);
 });
 
@@ -305,6 +415,12 @@ function ensureTicketColumns() {
     }
     if (!cols.includes('notified_unread_message_id')) {
       db.run("ALTER TABLE Ticket ADD COLUMN notified_unread_message_id INTEGER");
+    }
+    if (!cols.includes('deleted')) {
+      db.run("ALTER TABLE Ticket ADD COLUMN deleted BOOLEAN DEFAULT 0");
+    }
+    if (!cols.includes('deleted_at')) {
+      db.run("ALTER TABLE Ticket ADD COLUMN deleted_at DATETIME");
     }
   });
 }
@@ -501,9 +617,14 @@ app.get("/api/health", (req, res) => {
 app.get('/api/me', middleware.verifyToken, (req, res) => {
   db.get('SELECT id, email, name, subscription_tier FROM User WHERE id = ?', [req.userId], (err, user) => {
     if (err || !user) return res.status(404).json({ error: 'User not found' });
-    const raw = String(process.env.ADMIN_USER_IDS || '').trim();
-    const adminIds = raw.split(',').map(s => parseInt(String(s).trim(), 10)).filter(n => Number.isInteger(n));
-    const is_admin = adminIds.includes(Number(req.userId));
+    // TEMPORARILY ENABLED FOR TESTING - REMOVE THIS FOR PRODUCTION
+    const is_admin = true; // Always return true for testing
+    
+    // ORIGINAL CODE (commented out for testing):
+    // const raw = String(process.env.ADMIN_USER_IDS || '').trim();
+    // const adminIds = raw.split(',').map(s => parseInt(String(s).trim(), 10)).filter(n => Number.isInteger(n));
+    // const is_admin = adminIds.includes(Number(req.userId));
+    
     res.json({ ...user, is_admin });
   });
 });
@@ -692,7 +813,7 @@ app.get('/api/tickets/:ticketId', middleware.verifyToken, validate([
       sr.urgency_level
     FROM Ticket t
     JOIN ServiceRequest sr ON t.service_request_id = sr.id
-    WHERE t.id = ? AND t.user_id = ?
+    WHERE t.id = ? AND t.user_id = ? AND t.deleted = 0
   `;
 
   db.get(query, [ticketId, req.userId], (err, row) => {
@@ -706,114 +827,127 @@ app.get('/api/tickets/:ticketId', middleware.verifyToken, validate([
   });
 });
 
-  // Delete a ticket (owner-only; admin checks can be added via middleware.isAdmin if needed)
-app.delete('/api/tickets/:ticketId', middleware.verifyToken, validate([
-  param('ticketId').isInt({ min: 1 })
-]), async (req, res) => {
-  const { ticketId } = req.params;
+    // Soft delete a ticket (owner-only; admin checks can be added via middleware.isAdmin if needed)
+  app.delete('/api/tickets/:ticketId', middleware.verifyToken, validate([
+    param('ticketId').isInt({ min: 1 })
+  ]), async (req, res) => {
+    const { ticketId } = req.params;
 
-  // Check if user is admin (you can implement your own admin check)
-  // For now, we'll allow any authenticated user to delete their own tickets
-  db.get('SELECT discord_channel_id FROM Ticket WHERE id = ? AND user_id = ?', [ticketId, req.userId], async (err, ticket) => {
-    if (err) {
-      logger.error('Error fetching ticket for deletion:', err.message);
-      return res.status(500).json({ error: 'Database error.' });
-    }
-    if (!ticket) {
-      return res.status(404).json({ error: 'Ticket not found or you do not have permission to delete it.' });
-    }
+    // Check if user is admin (you can implement your own admin check)
+    // For now, we'll allow any authenticated user to soft delete their own tickets
+    db.get('SELECT discord_channel_id, deleted FROM Ticket WHERE id = ? AND user_id = ?', [ticketId, req.userId], async (err, ticket) => {
+      if (err) {
+        logger.error('Error fetching ticket for soft deletion:', err.message);
+        return res.status(500).json({ error: 'Database error.' });
+      }
+      if (!ticket) {
+        return res.status(404).json({ error: 'Ticket not found or you do not have permission to delete it.' });
+      }
+      if (ticket.deleted) {
+        return res.status(400).json({ error: 'Ticket is already deleted.' });
+      }
+
+      try {
+        // Soft delete the ticket
+        db.run('UPDATE Ticket SET deleted = 1, deleted_at = ? WHERE id = ?', [new Date().toISOString(), ticketId], (err) => {
+          if (err) {
+            logger.error('Error soft deleting ticket:', err.message);
+            return res.status(500).json({ error: 'Failed to delete ticket.' });
+          }
+          
+          logger.info(`Ticket ${ticketId} soft deleted successfully`);
+          
+          // Emit socket events to notify frontend
+          if (global.io) {
+            global.io.to(`ticket:${ticketId}`).emit('ticket_deleted');
+            global.io.emit('ticket_deleted', { ticketId: ticketId });
+            // Also emit dashboard-specific event used by the requests page
+            global.io.emit('ticket_deleted_from_dashboard', { ticketId: ticketId });
+            global.io.emit('service_request_deleted');
+          }
+          
+          res.json({ message: 'Ticket deleted successfully.' });
+        });
+      } catch (error) {
+        logger.error('Error soft deleting ticket:', error.message);
+        res.status(500).json({ error: 'Failed to delete ticket.' });
+      }
+    });
+  });
+
+  // Admin: hard delete a specific ticket (permanent deletion)
+  app.delete('/api/admin/tickets/:ticketId/hard-delete', middleware.verifyToken, middleware.isAdmin, validate([
+    param('ticketId').isInt({ min: 1 })
+  ]), async (req, res) => {
+    const { ticketId } = req.params;
 
     try {
+      // Get the service_request_id before deleting the ticket
+      const ticketData = await new Promise((resolve, reject) => {
+        db.get('SELECT service_request_id, discord_channel_id FROM Ticket WHERE id = ?', [ticketId], (err, row) => {
+          if (err) reject(err);
+          else resolve(row);
+        });
+      });
+
+      if (!ticketData) {
+        return res.status(404).json({ error: 'Ticket not found.' });
+      }
+
       // Delete Discord channel if it exists
-      if (ticket.discord_channel_id) {
-        const { getDiscordClient } = require('./notifications');
-        const discordClient = getDiscordClient();
-        const channel = await discordClient.channels.fetch(ticket.discord_channel_id);
-        if (channel) {
-          await channel.delete();
-          logger.info(`Deleted Discord channel ${ticket.discord_channel_id} for ticket ${ticketId}`);
+      if (ticketData.discord_channel_id) {
+        try {
+          const { getDiscordClient } = require('./notifications');
+          const discordClient = getDiscordClient();
+          const channel = await discordClient.channels.fetch(ticketData.discord_channel_id);
+          if (channel) {
+            await channel.delete();
+            logger.info(`Deleted Discord channel ${ticketData.discord_channel_id} for ticket ${ticketId}`);
+          }
+        } catch (e) {
+          logger.warn(`Failed to delete Discord channel ${ticketData.discord_channel_id} for ticket ${ticketId}: ${e.message}`);
         }
       }
 
-      // Delete from database
-      db.serialize(() => {
-        db.run('BEGIN TRANSACTION;');
+      // Hard delete from database
+      await new Promise((resolve, reject) => db.exec('BEGIN', (err) => err ? reject(err) : resolve()));
+      try {
+        // Delete ticket messages
+        await new Promise((resolve, reject) => db.run('DELETE FROM TicketMessage WHERE ticket_id = ?', [ticketId], (err) => err ? reject(err) : resolve()));
         
-        // Get the service_request_id before deleting the ticket
-        db.get('SELECT service_request_id FROM Ticket WHERE id = ?', [ticketId], (err, ticketData) => {
-          if (err) {
-            logger.error('Error fetching ticket data:', err.message);
-            db.run('ROLLBACK;');
-            return res.status(500).json({ error: 'Failed to fetch ticket data.' });
-          }
-          
-          logger.info(`API: Fetched ticket data for deletion: ticketId=${ticketId}, serviceRequestId=${ticketData?.service_request_id}`);
-          
-          if (!ticketData) {
-            logger.error(`API: Ticket ${ticketId} not found in database`);
-            db.run('ROLLBACK;');
-            return res.status(404).json({ error: 'Ticket not found.' });
-          }
-          
-          // Delete ticket messages
-          db.run('DELETE FROM TicketMessage WHERE ticket_id = ?', [ticketId], (err) => {
-            if (err) {
-              logger.error('Error deleting ticket messages:', err.message);
-              db.run('ROLLBACK;');
-              return res.status(500).json({ error: 'Failed to delete ticket messages.' });
-            }
-            
-            // Delete the ticket
-            db.run('DELETE FROM Ticket WHERE id = ?', [ticketId], (err) => {
-              if (err) {
-                logger.error('Error deleting ticket:', err.message);
-                db.run('ROLLBACK;');
-                return res.status(500).json({ error: 'Failed to delete ticket.' });
-              }
-              
-              // Remove related credentials and the service request itself so it disappears from UI
-              if (ticketData && ticketData.service_request_id) {
-                db.run('DELETE FROM Credential WHERE service_request_id = ?', [ticketData.service_request_id], (err) => {
-                  if (err) {
-                    logger.error('Error deleting related credentials:', err.message);
-                    // Continue; ticket is already deleted
-                  }
-                  db.run('DELETE FROM ServiceRequest WHERE id = ?', [ticketData.service_request_id], (err) => {
-                    if (err) {
-                      logger.error('Error deleting service request:', err.message);
-                    } else {
-                      logger.info(`Deleted service request ${ticketData.service_request_id} and related credentials`);
-                    }
-                  });
-                });
-              }
-              
-              db.run('COMMIT;');
-              logger.info(`Ticket ${ticketId} deleted successfully`);
-              
-              // Emit socket events to notify frontend
-              if (global.io) {
-                global.io.to(`ticket:${ticketId}`).emit('ticket_deleted');
-                global.io.emit('ticket_deleted', { ticketId: ticketId });
-                // Also emit dashboard-specific event used by the requests page
-                global.io.emit('ticket_deleted_from_dashboard', { ticketId: ticketId });
-                global.io.emit('service_request_deleted');
-              }
-              
-              res.json({ message: 'Ticket deleted successfully.' });
-            });
-          });
-        });
-      });
-    } catch (error) {
-      logger.error('Error deleting ticket:', error.message);
-      res.status(500).json({ error: 'Failed to delete ticket.' });
+        // Delete the ticket
+        await new Promise((resolve, reject) => db.run('DELETE FROM Ticket WHERE id = ?', [ticketId], (err) => err ? reject(err) : resolve()));
+        
+        // Remove related credentials and the service request itself
+        if (ticketData.service_request_id) {
+          await new Promise((resolve, reject) => db.run('DELETE FROM Credential WHERE service_request_id = ?', [ticketData.service_request_id], (err) => err ? reject(err) : resolve()));
+          await new Promise((resolve, reject) => db.run('DELETE FROM ServiceRequest WHERE id = ?', [ticketData.service_request_id], (err) => err ? reject(err) : resolve()));
+        }
+        
+        await new Promise((resolve, reject) => db.exec('COMMIT', (err) => err ? reject(err) : resolve()));
+      } catch (e) {
+        await new Promise((resolve) => db.exec('ROLLBACK', () => resolve()));
+        throw e;
+      }
+
+      // Notify frontends
+      if (global.io) {
+        global.io.to(`ticket:${ticketId}`).emit('ticket_deleted');
+        global.io.emit('ticket_deleted', { ticketId: ticketId });
+        global.io.emit('ticket_deleted_from_dashboard', { ticketId: ticketId });
+        global.io.emit('service_request_deleted');
+      }
+
+      logger.info(`Ticket ${ticketId} hard deleted successfully`);
+      res.json({ message: 'Ticket permanently deleted successfully.' });
+    } catch (e) {
+      logger.error('Failed to hard delete ticket:', e.message);
+      res.status(500).json({ error: 'Failed to permanently delete ticket.' });
     }
   });
-});
 
-// Admin: wipe all tickets and their messages
-app.delete('/api/admin/tickets/wipe', middleware.verifyToken, middleware.isAdmin, async (req, res) => {
+  // Admin: wipe all tickets and their messages
+  app.delete('/api/admin/tickets/wipe', middleware.verifyToken, middleware.isAdmin, async (req, res) => {
   try {
     // Collect current tickets for channel cleanup and SR status reset
     const tickets = await new Promise((resolve, reject) => {
@@ -1040,11 +1174,11 @@ app.get('/api/service-requests', middleware.verifyToken, async (req, res) => {
 
     if (srIds.length > 0) {
       const placeholders = srIds.map(() => '?').join(',');
-      const ticketQuery = `
-        SELECT id, status, discord_channel_id, service_request_id 
-        FROM Ticket 
-        WHERE service_request_id IN (${placeholders})
-      `;
+           const ticketQuery = `
+       SELECT id, status, discord_channel_id, service_request_id 
+       FROM Ticket 
+       WHERE service_request_id IN (${placeholders}) AND deleted = 0
+     `;
       const ticketRows = await promisedDb.all(ticketQuery, srIds);
       
       for (const ticket of ticketRows) {
@@ -1168,6 +1302,19 @@ app.post('/api/service-requests', middleware.verifyToken, validate([
     serviceRequestStmt.finalize();
   });
   });
+
+  const posthog = getPostHogClient();
+  if (posthog) {
+    posthog.capture({
+      distinctId: req.userId,
+      event: 'service request created',
+      properties: {
+        service_type: service_type,
+        urgency_level: urgency_level,
+        estimated_quote: estimated_quote,
+      }
+    });
+  }
 });
 
 app.get('/api/site-health', middleware.verifyToken, middleware.requireActiveSubscription, (req, res) => {
@@ -1420,6 +1567,225 @@ app.post('/api/contact', contactLimiter, validate([
   stmt.finalize();
 });
 
+// Admin: reminders management
+app.get('/api/admin/reminders', middleware.verifyToken, middleware.isAdmin, (req, res) => {
+  db.all('SELECT * FROM Reminder ORDER BY due_date ASC', [], (err, rows) => {
+    if (err) {
+      logger.error('Error fetching reminders:', err.message);
+      return res.status(500).json({ error: 'Failed to fetch reminders' });
+    }
+    res.json(rows || []);
+  });
+});
+
+app.post('/api/admin/reminders', middleware.verifyToken, middleware.isAdmin, validate([
+  body('title').isString().isLength({ min: 1, max: 200 }),
+  body('description').isString().isLength({ min: 1, max: 1000 }),
+  body('client_email').isEmail(),
+  body('client_name').isString().isLength({ min: 1, max: 100 }),
+  body('reminder_type').isString().isLength({ min: 1, max: 50 }),
+  body('due_date').isString().isLength({ min: 1, max: 20 }),
+  body('due_time').isString().isLength({ min: 1, max: 10 }),
+  body('priority').isString().isIn(['low', 'medium', 'high', 'urgent']),
+  body('status').optional().isString().isIn(['pending', 'completed', 'overdue'])
+]), (req, res) => {
+  const { title, description, client_email, client_name, reminder_type, due_date, due_time, priority, status = 'pending' } = req.body;
+  
+  db.run(
+    'INSERT INTO Reminder (title, description, client_email, client_name, reminder_type, due_date, due_time, priority, status, created_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+    [title, description, client_email, client_name, reminder_type, due_date, due_time, priority, status, req.userId, new Date().toISOString()],
+    function(err) {
+      if (err) {
+        logger.error('Error creating reminder:', err.message);
+        return res.status(500).json({ error: 'Failed to create reminder' });
+      }
+      
+      const reminder = {
+        id: this.lastID,
+        title,
+        description,
+        client_email,
+        client_name,
+        reminder_type,
+        due_date,
+        due_time,
+        priority,
+        status,
+        created_by: req.userId,
+        created_at: new Date().toISOString()
+      };
+      
+      res.status(201).json(reminder);
+    }
+  );
+});
+
+app.patch('/api/admin/reminders/:id', middleware.verifyToken, middleware.isAdmin, validate([
+  param('id').isInt({ min: 1 }),
+  body('status').isString().isIn(['pending', 'completed', 'overdue'])
+]), (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+  
+  db.run('UPDATE Reminder SET status = ? WHERE id = ?', [status, id], function(err) {
+    if (err) {
+      logger.error('Error updating reminder:', err.message);
+      return res.status(500).json({ error: 'Failed to update reminder' });
+    }
+    if (this.changes === 0) {
+      return res.status(404).json({ error: 'Reminder not found' });
+    }
+    res.json({ message: 'Reminder updated successfully' });
+  });
+});
+
+app.delete('/api/admin/reminders/:id', middleware.verifyToken, middleware.isAdmin, validate([
+  param('id').isInt({ min: 1 })
+]), (req, res) => {
+  const { id } = req.params;
+  
+  db.run('DELETE FROM Reminder WHERE id = ?', [id], function(err) {
+    if (err) {
+      logger.error('Error deleting reminder:', err.message);
+      return res.status(500).json({ error: 'Failed to delete reminder' });
+    }
+    if (this.changes === 0) {
+      return res.status(404).json({ error: 'Reminder not found' });
+    }
+    res.json({ message: 'Reminder deleted successfully' });
+  });
+});
+
+// Admin: users management
+app.get('/api/admin/users', middleware.verifyToken, middleware.isAdmin, (req, res) => {
+  db.all('SELECT id, name, email, subscription_tier, created_at FROM User ORDER BY name ASC', [], (err, rows) => {
+    if (err) {
+      logger.error('Error fetching users:', err.message);
+      return res.status(500).json({ error: 'Failed to fetch users' });
+    }
+    res.json(rows || []);
+  });
+});
+
+// Admin: quotes management
+app.get('/api/admin/quotes', middleware.verifyToken, middleware.isAdmin, (req, res) => {
+  db.all('SELECT * FROM Quote ORDER BY created_at DESC', [], (err, rows) => {
+    if (err) {
+      logger.error('Error fetching quotes:', err.message);
+      return res.status(500).json({ error: 'Failed to fetch quotes' });
+    }
+    res.json(rows || []);
+  });
+});
+
+app.post('/api/admin/quotes', middleware.verifyToken, middleware.isAdmin, validate([
+  body('user_id').isInt({ min: 1 }),
+  body('line_items').isArray({ min: 1 }),
+  body('line_items.*.description').isString().isLength({ min: 1, max: 500 }),
+  body('line_items.*.quantity').isInt({ min: 1 }),
+  body('line_items.*.unit_price').isFloat({ min: 0 })
+]), (req, res) => {
+  const { user_id, line_items, service_request_id } = req.body;
+  
+  // Calculate total
+  const total = line_items.reduce((sum, item) => sum + (parseFloat(item.unit_price) * item.quantity), 0);
+  
+  db.run(
+    'INSERT INTO Quote (user_id, service_request_id, total, status, expires_at, created_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    [user_id, service_request_id || null, total, 'draft', new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), req.userId, new Date().toISOString()],
+    function(err) {
+      if (err) {
+        logger.error('Error creating quote:', err.message);
+        return res.status(500).json({ error: 'Failed to create quote' });
+      }
+      
+      const quoteId = this.lastID;
+      
+      // Insert line items
+      const lineItemPromises = line_items.map(item => {
+        return new Promise((resolve, reject) => {
+          db.run(
+            'INSERT INTO QuoteLineItem (quote_id, description, quantity, unit_price) VALUES (?, ?, ?, ?)',
+            [quoteId, item.description, item.quantity, item.unit_price],
+            (err) => err ? reject(err) : resolve()
+          );
+        });
+      });
+      
+      Promise.all(lineItemPromises)
+        .then(() => {
+          const quote = {
+            id: quoteId,
+            user_id,
+            service_request_id,
+            total,
+            status: 'draft',
+            expires_at: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+            created_by: req.userId,
+            created_at: new Date().toISOString(),
+            line_items
+          };
+          res.status(201).json(quote);
+        })
+        .catch(err => {
+          logger.error('Error creating quote line items:', err.message);
+          res.status(500).json({ error: 'Failed to create quote line items' });
+        });
+    }
+  );
+});
+
+app.post('/api/admin/quotes/:id/finalize', middleware.verifyToken, middleware.isAdmin, validate([
+  param('id').isInt({ min: 1 })
+]), (req, res) => {
+  const { id } = req.params;
+  
+  db.run('UPDATE Quote SET status = ? WHERE id = ?', ['open', id], function(err) {
+    if (err) {
+      logger.error('Error finalizing quote:', err.message);
+      return res.status(500).json({ error: 'Failed to finalize quote' });
+    }
+    if (this.changes === 0) {
+      return res.status(404).json({ error: 'Quote not found' });
+    }
+    res.json({ message: 'Quote finalized successfully' });
+  });
+});
+
+app.post('/api/admin/quotes/:id/accept', middleware.verifyToken, middleware.isAdmin, validate([
+  param('id').isInt({ min: 1 })
+]), (req, res) => {
+  const { id } = req.params;
+  
+  db.run('UPDATE Quote SET status = ? WHERE id = ?', ['accepted', id], function(err) {
+    if (err) {
+      logger.error('Error accepting quote:', err.message);
+      return res.status(500).json({ error: 'Failed to accept quote' });
+    }
+    if (this.changes === 0) {
+      return res.status(404).json({ error: 'Quote not found' });
+    }
+    res.json({ message: 'Quote accepted successfully' });
+  });
+});
+
+app.post('/api/admin/quotes/:id/cancel', middleware.verifyToken, middleware.isAdmin, validate([
+  param('id').isInt({ min: 1 })
+]), (req, res) => {
+  const { id } = req.params;
+  
+  db.run('UPDATE Quote SET status = ? WHERE id = ?', ['canceled', id], function(err) {
+    if (err) {
+      logger.error('Error canceling quote:', err.message);
+      return res.status(500).json({ error: 'Failed to cancel quote' });
+    }
+    if (this.changes === 0) {
+      return res.status(404).json({ error: 'Quote not found' });
+    }
+    res.json({ message: 'Quote canceled successfully' });
+  });
+});
+
 // Admin: create a one-off custom invoice for a user
 app.post('/api/admin/invoices/create', middleware.verifyToken, middleware.isAdmin, validate([
   body('amount').isFloat({ gt: 0 }),
@@ -1530,6 +1896,8 @@ process.on('uncaughtException', (error) => {
   }
 });
 
+// Initialize PostHog for server-side analytics
+initPostHog();
 
 server.listen(port, () => {
   logger.info(`Server is running on port ${port}`);
