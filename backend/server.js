@@ -39,6 +39,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const app = express();
+
+// Trust proxy for Nginx - fixes express-rate-limit X-Forwarded-For errors
+app.set('trust proxy', 1);
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
