@@ -621,13 +621,9 @@ app.get("/api/health", (req, res) => {
 app.get('/api/me', middleware.verifyToken, (req, res) => {
   db.get('SELECT id, email, name, subscription_tier FROM User WHERE id = ?', [req.userId], (err, user) => {
     if (err || !user) return res.status(404).json({ error: 'User not found' });
-    // TEMPORARILY ENABLED FOR TESTING - REMOVE THIS FOR PRODUCTION
-    const is_admin = true; // Always return true for testing
-    
-    // ORIGINAL CODE (commented out for testing):
-    // const raw = String(process.env.ADMIN_USER_IDS || '').trim();
-    // const adminIds = raw.split(',').map(s => parseInt(String(s).trim(), 10)).filter(n => Number.isInteger(n));
-    // const is_admin = adminIds.includes(Number(req.userId));
+    const raw = String(process.env.ADMIN_USER_IDS || '').trim();
+    const adminIds = raw.split(',').map(s => parseInt(String(s).trim(), 10)).filter(n => Number.isInteger(n));
+    const is_admin = adminIds.includes(Number(req.userId));
     
     res.json({ ...user, is_admin });
   });
